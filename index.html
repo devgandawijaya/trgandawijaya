@@ -1,0 +1,2058 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tatang Roswandi Ganda Wijaya | Fullstack Developer</title>
+    <meta name="description" content="Portfolio pribadi Tatang Roswandi Ganda Wijaya, Fullstack Developer yang membangun website, ERP, dashboard, mobile apps, automation system, dan solusi digital modern.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #07111f;
+            --bg-soft: #0b1728;
+            --panel: rgba(10, 24, 42, 0.72);
+            --panel-strong: rgba(12, 26, 46, 0.92);
+            --line: rgba(145, 184, 255, 0.16);
+            --line-strong: rgba(145, 184, 255, 0.28);
+            --text: #f3f7ff;
+            --muted: #91a2be;
+            --accent: #3f7cff;
+            --accent-soft: rgba(63, 124, 255, 0.16);
+            --shadow: 0 24px 80px rgba(2, 8, 18, 0.55);
+            --radius: 28px;
+            --container: min(1180px, calc(100% - 32px));
+            --nav-height: 84px;
+            scroll-behavior: smooth;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-padding-top: 104px;
+        }
+
+        body {
+            font-family: "Outfit", sans-serif;
+            background:
+                radial-gradient(circle at top left, rgba(63, 124, 255, 0.18), transparent 30%),
+                radial-gradient(circle at 85% 15%, rgba(90, 152, 255, 0.1), transparent 28%),
+                linear-gradient(180deg, #050d18 0%, #07111f 45%, #081424 100%);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        body::before,
+        body::after {
+            content: "";
+            position: fixed;
+            width: 360px;
+            height: 360px;
+            border-radius: 50%;
+            filter: blur(90px);
+            z-index: -2;
+            pointer-events: none;
+        }
+
+        body::before {
+            top: -120px;
+            left: -120px;
+            background: rgba(72, 122, 255, 0.15);
+        }
+
+        body::after {
+            right: -140px;
+            top: 28%;
+            background: rgba(58, 98, 177, 0.14);
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        button,
+        input,
+        textarea {
+            font: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            width: var(--container);
+            margin: 0 auto;
+        }
+
+        .section {
+            padding: 62px 0;
+            position: relative;
+        }
+
+        .section-heading {
+            max-width: 760px;
+            margin-bottom: 18px;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            letter-spacing: 0.28em;
+            text-transform: uppercase;
+            color: #8fb1ff;
+            font-size: 0.78rem;
+            margin-bottom: 14px;
+        }
+
+        .eyebrow::before {
+            content: "";
+            width: 38px;
+            height: 1px;
+            background: rgba(143, 177, 255, 0.7);
+        }
+
+        h1,
+        h2,
+        h3,
+        .brand-mark {
+            line-height: 1.08;
+        }
+
+        h1 {
+            font-size: clamp(3.1rem, 5.9vw, 5.8rem);
+            letter-spacing: -0.05em;
+            margin-bottom: 12px;
+        }
+
+        h2 {
+            font-size: clamp(2.2rem, 4vw, 3.5rem);
+            letter-spacing: -0.04em;
+            margin-bottom: 10px;
+        }
+
+        h1 .accent-line,
+        h2 .accent-line {
+            font-family: "Playfair Display", serif;
+            font-weight: 600;
+            color: #bfd4ff;
+        }
+
+        p {
+            color: var(--muted);
+            font-size: 1rem;
+        }
+
+        .glass-card {
+            background: linear-gradient(180deg, rgba(12, 28, 49, 0.78), rgba(8, 18, 33, 0.88));
+            border: 1px solid var(--line);
+            backdrop-filter: blur(18px);
+            box-shadow: var(--shadow);
+            border-radius: var(--radius);
+        }
+
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            transition: background 0.35s ease, border-color 0.35s ease, backdrop-filter 0.35s ease, box-shadow 0.35s ease;
+            border-bottom: 1px solid transparent;
+        }
+
+        .site-header.scrolled {
+            background: rgba(5, 13, 24, 0.64);
+            backdrop-filter: blur(18px);
+            border-color: rgba(143, 177, 255, 0.08);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
+        }
+
+        .nav-shell {
+            min-height: var(--nav-height);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+        }
+
+        .brand {
+            display: inline-flex;
+            align-items: center;
+            gap: 14px;
+            font-size: 1.02rem;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+        }
+
+        .brand-mark {
+            width: 44px;
+            height: 44px;
+            display: grid;
+            place-items: center;
+            border-radius: 16px;
+            background: linear-gradient(135deg, rgba(63, 124, 255, 0.24), rgba(22, 47, 88, 0.92));
+            border: 1px solid rgba(143, 177, 255, 0.18);
+            font-size: 0.95rem;
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 26px;
+        }
+
+        .nav-links a {
+            color: rgba(243, 247, 255, 0.78);
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -9px;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, rgba(63, 124, 255, 0), rgba(63, 124, 255, 1), rgba(63, 124, 255, 0));
+            transform: scaleX(0);
+            transform-origin: center;
+            transition: transform 0.28s ease;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--text);
+        }
+
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            transform: scaleX(1);
+        }
+
+        .menu-toggle {
+            display: none;
+            width: 52px;
+            height: 52px;
+            border-radius: 16px;
+            border: 1px solid var(--line);
+            background: rgba(8, 19, 34, 0.72);
+            color: var(--text);
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .menu-toggle span,
+        .menu-toggle::before,
+        .menu-toggle::after {
+            content: "";
+            width: 19px;
+            height: 2px;
+            border-radius: 999px;
+            background: currentColor;
+            position: absolute;
+            transition: transform 0.28s ease, opacity 0.28s ease;
+        }
+
+        .menu-toggle::before {
+            transform: translateY(-6px);
+        }
+
+        .menu-toggle::after {
+            transform: translateY(6px);
+        }
+
+        .menu-toggle.is-open span {
+            opacity: 0;
+        }
+
+        .menu-toggle.is-open::before {
+            transform: rotate(45deg);
+        }
+
+        .menu-toggle.is-open::after {
+            transform: rotate(-45deg);
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 12px 0 24px;
+            overflow: clip;
+        }
+
+        .hero-shell {
+            display: grid;
+            grid-template-columns: 1.02fr minmax(360px, 0.95fr) 0.72fr;
+            gap: 24px;
+            align-items: center;
+            min-height: calc(100vh - var(--nav-height) - 24px);
+        }
+
+        .hero-copy {
+            align-self: center;
+            position: relative;
+        }
+
+        .hero-copy p {
+            max-width: 580px;
+            font-size: 1.02rem;
+        }
+
+        .hero-copy::before {
+            content: "01";
+            position: absolute;
+            top: -56px;
+            left: -8px;
+            font-size: clamp(4.8rem, 11vw, 8.5rem);
+            font-weight: 700;
+            letter-spacing: -0.08em;
+            color: rgba(191, 212, 255, 0.08);
+            pointer-events: none;
+        }
+
+        .hero-topline {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+        }
+
+        .hero-line {
+            width: 54px;
+            height: 1px;
+            background: linear-gradient(90deg, rgba(143, 177, 255, 0), rgba(143, 177, 255, 0.78), rgba(143, 177, 255, 0));
+        }
+
+        .hero-micro {
+            font-size: 0.82rem;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: #9dbbff;
+        }
+
+        .hero-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 16px;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 10px 14px;
+            border-radius: 999px;
+            background: rgba(10, 25, 43, 0.78);
+            border: 1px solid rgba(143, 177, 255, 0.12);
+            color: #dbe7ff;
+            font-size: 0.92rem;
+        }
+
+        .hero-copy .role {
+            font-size: 1.12rem;
+            color: #bfd4ff;
+            margin-bottom: 16px;
+        }
+
+        .hero-actions {
+            margin-top: 24px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .primary-btn,
+        .secondary-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 20px;
+            border-radius: 18px;
+            font-weight: 600;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+
+        .primary-btn {
+            background: linear-gradient(135deg, #4d8cff, #2358cd);
+            color: white;
+            box-shadow: 0 16px 32px rgba(36, 84, 191, 0.28);
+        }
+
+        .secondary-btn {
+            background: rgba(10, 25, 43, 0.78);
+            border: 1px solid rgba(143, 177, 255, 0.14);
+            color: #e7f0ff;
+        }
+
+        .primary-btn:hover,
+        .secondary-btn:hover,
+        .primary-btn:focus-visible,
+        .secondary-btn:focus-visible {
+            transform: translateY(-3px);
+        }
+
+        .hero-support {
+            margin-top: 18px;
+            max-width: 520px;
+            color: #b8c8e8;
+        }
+
+        .hero-signature {
+            margin-top: 18px;
+            display: inline-flex;
+            align-items: center;
+            gap: 14px;
+            padding: 12px 16px;
+            border-radius: 18px;
+            background: rgba(8, 19, 34, 0.82);
+            border: 1px solid rgba(143, 177, 255, 0.12);
+            color: #dfe9ff;
+        }
+
+        .hero-signature strong {
+            display: block;
+            font-size: 0.96rem;
+            color: #f3f7ff;
+        }
+
+        .hero-signature span {
+            display: block;
+            font-size: 0.8rem;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: #8fb1ff;
+        }
+
+        .floating-arrow {
+            width: 68px;
+            height: 68px;
+            border-radius: 50%;
+            border: 1px solid rgba(143, 177, 255, 0.18);
+            background: radial-gradient(circle at 30% 30%, #4e8eff, #1d4cb8 65%, #12316d 100%);
+            color: white;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 18px 45px rgba(24, 63, 147, 0.42);
+            animation: floatY 3.4s ease-in-out infinite;
+        }
+
+        .floating-arrow svg {
+            width: 22px;
+            height: 22px;
+        }
+
+        .hero-media {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            min-height: min(92vh, 920px);
+            padding-bottom: 72px;
+            transform: translateY(-8px);
+        }
+
+        .hero-media::before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 10%;
+            width: 115%;
+            height: 88%;
+            transform: translateX(-50%);
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(79, 129, 255, 0.3) 0%, rgba(20, 43, 84, 0.22) 35%, rgba(9, 22, 39, 0) 72%);
+            filter: blur(18px);
+        }
+
+        .hero-media::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: 88px;
+            width: 70%;
+            height: 24%;
+            transform: translateX(-50%);
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(63, 124, 255, 0.18), rgba(7, 17, 32, 0));
+            filter: blur(26px);
+        }
+
+        .hero-vertical-tag {
+            position: absolute;
+            right: -42px;
+            top: 120px;
+            writing-mode: vertical-rl;
+            transform: rotate(180deg);
+            letter-spacing: 0.28em;
+            text-transform: uppercase;
+            font-size: 0.74rem;
+            color: rgba(191, 212, 255, 0.5);
+            padding: 14px 10px;
+            border-radius: 999px;
+            border: 1px solid rgba(143, 177, 255, 0.1);
+            background: rgba(10, 25, 43, 0.34);
+            backdrop-filter: blur(12px);
+        }
+
+        .portrait-wrap {
+            position: relative;
+            width: min(100%, 470px);
+            min-height: min(88vh, 860px);
+            height: 100%;
+            padding: 20px 20px 34px;
+            border-radius: 30px;
+            background: linear-gradient(180deg, rgba(17, 38, 66, 0.92), rgba(7, 16, 29, 0.82));
+            border: 1px solid rgba(143, 177, 255, 0.18);
+            box-shadow: 0 30px 90px rgba(2, 8, 18, 0.62), 0 0 70px rgba(63, 124, 255, 0.12);
+            overflow: hidden;
+            animation: floatY 4.4s ease-in-out infinite;
+        }
+
+        .portrait-wrap::after {
+            content: "";
+            position: absolute;
+            inset: 18px;
+            border: 1px solid rgba(143, 177, 255, 0.1);
+            border-radius: 24px;
+            pointer-events: none;
+        }
+
+        .portrait {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center bottom;
+            border-radius: 22px;
+            filter: saturate(0.98) contrast(1.04) drop-shadow(0 18px 34px rgba(5, 14, 27, 0.45));
+        }
+
+        .hero-stat-card {
+            position: absolute;
+            left: 50%;
+            bottom: 6px;
+            transform: translateX(-50%);
+            width: min(86%, 360px);
+            padding: 18px 20px;
+            border-radius: 20px;
+            background: linear-gradient(180deg, rgba(12, 28, 49, 0.82), rgba(8, 18, 33, 0.92));
+            border: 1px solid rgba(143, 177, 255, 0.16);
+            backdrop-filter: blur(18px);
+            box-shadow: 0 24px 50px rgba(2, 8, 18, 0.45), 0 0 36px rgba(63, 124, 255, 0.12);
+            z-index: 2;
+            animation: floatY 4.8s ease-in-out infinite;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .hero-stat-card:hover {
+            transform: translateX(-50%) translateY(-6px);
+            box-shadow: 0 28px 56px rgba(2, 8, 18, 0.5), 0 0 42px rgba(63, 124, 255, 0.18);
+        }
+
+        .hero-stat-card ul {
+            display: grid;
+            gap: 10px;
+        }
+
+        .hero-stat-card li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #eaf1ff;
+            font-size: 0.96rem;
+        }
+
+        .hero-stat-card li::before {
+            content: "✓";
+            width: 28px;
+            height: 28px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: rgba(63, 124, 255, 0.16);
+            color: #9fc0ff;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .hero-side {
+            display: grid;
+            gap: 14px;
+            align-self: center;
+        }
+
+        .info-card {
+            padding: 20px;
+            border-radius: 24px;
+            background: linear-gradient(180deg, rgba(10, 25, 43, 0.86), rgba(7, 17, 32, 0.86));
+            border: 1px solid var(--line);
+            box-shadow: var(--shadow);
+        }
+
+        .info-card h3 {
+            font-size: 0.86rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            color: #9ebcff;
+        }
+
+        .info-card.featured {
+            background: linear-gradient(180deg, rgba(16, 37, 65, 0.96), rgba(8, 19, 34, 0.92));
+            border-color: rgba(143, 177, 255, 0.18);
+        }
+
+        .info-label {
+            display: inline-flex;
+            padding: 7px 10px;
+            border-radius: 999px;
+            background: rgba(63, 124, 255, 0.12);
+            border: 1px solid rgba(143, 177, 255, 0.12);
+            color: #cddcff;
+            font-size: 0.82rem;
+            margin-bottom: 12px;
+        }
+
+        .info-card p {
+            font-size: 0.96rem;
+            color: #d9e6ff;
+        }
+
+        .detail-list {
+            display: grid;
+            gap: 10px;
+            margin-top: 12px;
+        }
+
+        .detail-list li {
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(143, 177, 255, 0.08);
+            color: #d9e6ff;
+            font-size: 0.94rem;
+        }
+
+        .detail-list li:last-child {
+            padding-bottom: 0;
+            border-bottom: 0;
+        }
+
+        .social-list {
+            display: flex;
+            gap: 12px;
+            margin-top: 12px;
+            flex-wrap: wrap;
+        }
+
+        .social-pill {
+            width: 46px;
+            height: 46px;
+            border-radius: 15px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(143, 177, 255, 0.18);
+            background: rgba(12, 28, 49, 0.72);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+
+        .social-pill:hover,
+        .social-pill:focus-visible {
+            transform: translateY(-4px);
+            border-color: rgba(143, 177, 255, 0.38);
+            box-shadow: 0 14px 30px rgba(34, 82, 171, 0.28);
+        }
+
+        .social-pill svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1.05fr 0.95fr;
+            gap: 24px;
+            align-items: stretch;
+        }
+
+        .about-copy,
+        .stats-card,
+        .skill-card,
+        .video-card,
+        .portfolio-card,
+        .timeline-card,
+        .contact-panel {
+            padding: 24px;
+        }
+
+        .about-copy p {
+            max-width: 640px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+            margin-top: 16px;
+        }
+
+        .stat-box {
+            padding: 22px;
+            border-radius: 22px;
+            background: rgba(7, 20, 35, 0.72);
+            border: 1px solid rgba(143, 177, 255, 0.1);
+        }
+
+        .stat-box strong {
+            display: block;
+            font-size: 1.9rem;
+            color: var(--text);
+            margin-bottom: 6px;
+        }
+
+        .stats-card {
+            display: grid;
+            gap: 12px;
+            align-content: center;
+        }
+
+        .stats-card .mini-line {
+            display: grid;
+            gap: 4px;
+            padding-bottom: 14px;
+            border-bottom: 1px solid rgba(143, 177, 255, 0.12);
+        }
+
+        .skills-shell {
+            display: grid;
+            gap: 18px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 16px;
+        }
+
+        .skill-card {
+            display: grid;
+            gap: 12px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 22px 48px rgba(25, 71, 161, 0.2);
+            border-color: rgba(143, 177, 255, 0.24);
+        }
+
+        .skill-head {
+            display: grid;
+            grid-template-columns: 54px 1fr;
+            gap: 14px;
+            align-items: start;
+        }
+
+        .skill-icon {
+            width: 54px;
+            height: 54px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 18px;
+            background: linear-gradient(135deg, rgba(77, 140, 255, 0.22), rgba(16, 37, 65, 0.92));
+            border: 1px solid rgba(143, 177, 255, 0.14);
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+        }
+
+        .skill-icon svg {
+            width: 22px;
+            height: 22px;
+            color: #e7f0ff;
+        }
+
+        .skill-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+        }
+
+        .skill-main {
+            display: grid;
+            gap: 10px;
+        }
+
+        .skill-top h3 {
+            font-size: 1rem;
+            margin: 0;
+        }
+
+        .skill-level {
+            display: inline-flex;
+            padding: 7px 10px;
+            border-radius: 999px;
+            background: rgba(63, 124, 255, 0.12);
+            border: 1px solid rgba(143, 177, 255, 0.12);
+            color: #dce8ff;
+            font-size: 0.8rem;
+            white-space: nowrap;
+        }
+
+        .skill-meta {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #91b2f5;
+            font-size: 0.82rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .skill-meta::before {
+            content: "";
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #7ea8ff, #3f7cff);
+            box-shadow: 0 0 0 6px rgba(63, 124, 255, 0.1);
+        }
+
+        .skill-card p {
+            font-size: 0.94rem;
+        }
+
+        .skill-progress {
+            display: grid;
+            gap: 8px;
+            margin-top: 2px;
+        }
+
+        .skill-progress-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            color: #dce8ff;
+            font-size: 0.84rem;
+        }
+
+        .skill-progress-track {
+            position: relative;
+            width: 100%;
+            height: 8px;
+            border-radius: 999px;
+            overflow: hidden;
+            background: rgba(143, 177, 255, 0.08);
+        }
+
+        .skill-progress-bar {
+            position: absolute;
+            inset: 0 auto 0 0;
+            width: var(--skill-score, 80%);
+            border-radius: inherit;
+            background: linear-gradient(90deg, #76a5ff, #3f7cff);
+            box-shadow: 0 0 18px rgba(63, 124, 255, 0.28);
+        }
+
+        .tab-group {
+            display: grid;
+            gap: 16px;
+        }
+
+        .tab-controls {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tab-button {
+            padding: 11px 16px;
+            border-radius: 999px;
+            border: 1px solid rgba(143, 177, 255, 0.12);
+            background: rgba(8, 19, 34, 0.86);
+            color: #dbe7ff;
+            cursor: pointer;
+            transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease, color 0.25s ease;
+        }
+
+        .tab-button:hover,
+        .tab-button:focus-visible {
+            transform: translateY(-2px);
+            border-color: rgba(143, 177, 255, 0.24);
+        }
+
+        .tab-button.is-active {
+            background: linear-gradient(135deg, rgba(77, 140, 255, 0.22), rgba(35, 88, 205, 0.18));
+            border-color: rgba(143, 177, 255, 0.32);
+            color: #ffffff;
+        }
+
+        .tab-panel {
+            display: none;
+        }
+
+        .tab-panel.is-active {
+            display: block;
+        }
+
+        .tab-summary {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 14px;
+            flex-wrap: wrap;
+        }
+
+        .tab-summary span {
+            display: inline-flex;
+            padding: 8px 12px;
+            border-radius: 999px;
+            background: rgba(63, 124, 255, 0.1);
+            border: 1px solid rgba(143, 177, 255, 0.12);
+            color: #dbe7ff;
+            font-size: 0.9rem;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 16px;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 16px;
+        }
+
+        .video-card {
+            display: grid;
+            gap: 16px;
+            transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+        }
+
+        .video-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 26px 60px rgba(25, 71, 161, 0.22);
+            border-color: rgba(143, 177, 255, 0.24);
+        }
+
+        .video-frame {
+            position: relative;
+            border-radius: 22px;
+            overflow: hidden;
+            aspect-ratio: 16 / 9;
+            border: 1px solid rgba(143, 177, 255, 0.12);
+            background: rgba(5, 14, 27, 0.86);
+        }
+
+        .video-trigger {
+            width: 100%;
+            height: 100%;
+            display: block;
+            padding: 0;
+            border: 0;
+            background: transparent;
+            color: inherit;
+            cursor: pointer;
+            text-align: left;
+        }
+
+        .video-trigger img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+            transition: transform 0.45s ease, filter 0.45s ease;
+        }
+
+        .video-card:hover .video-trigger img,
+        .video-trigger:focus-visible img {
+            transform: scale(1.06);
+            filter: brightness(0.78);
+        }
+
+        .video-play {
+            position: absolute;
+            inset: auto auto 18px 18px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 16px;
+            border-radius: 999px;
+            background: rgba(5, 14, 27, 0.86);
+            border: 1px solid rgba(143, 177, 255, 0.18);
+            color: #f3f7ff;
+            backdrop-filter: blur(14px);
+            box-shadow: 0 18px 34px rgba(2, 8, 18, 0.34);
+        }
+
+        .video-play svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        .video-tag {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            display: inline-flex;
+            padding: 8px 12px;
+            border-radius: 999px;
+            background: rgba(63, 124, 255, 0.16);
+            border: 1px solid rgba(143, 177, 255, 0.18);
+            color: #dce8ff;
+            font-size: 0.82rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .video-card h3 {
+            font-size: 1.14rem;
+            margin-bottom: 4px;
+        }
+
+        .video-card p {
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        .video-modal {
+            position: fixed;
+            inset: 0;
+            display: grid;
+            place-items: center;
+            padding: 24px;
+            background: rgba(2, 8, 18, 0.84);
+            backdrop-filter: blur(14px);
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.28s ease;
+            z-index: 40;
+        }
+
+        .video-modal.is-open {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .video-modal-dialog {
+            width: min(100%, 1040px);
+            display: grid;
+            gap: 16px;
+            padding: 18px;
+            border-radius: 28px;
+            background: linear-gradient(180deg, rgba(10, 25, 43, 0.96), rgba(5, 14, 27, 0.94));
+            border: 1px solid rgba(143, 177, 255, 0.14);
+            box-shadow: 0 32px 80px rgba(2, 8, 18, 0.52);
+        }
+
+        .video-modal-head {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+        }
+
+        .video-modal-head h3 {
+            font-size: 1.1rem;
+        }
+
+        .video-modal-close {
+            width: 46px;
+            height: 46px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 16px;
+            border: 1px solid rgba(143, 177, 255, 0.14);
+            background: rgba(9, 22, 39, 0.74);
+            color: #f3f7ff;
+            cursor: pointer;
+        }
+
+        .video-modal-frame {
+            position: relative;
+            overflow: hidden;
+            border-radius: 24px;
+            aspect-ratio: 16 / 9;
+            background: #050d18;
+            border: 1px solid rgba(143, 177, 255, 0.12);
+        }
+
+        .video-modal-frame iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+            display: block;
+        }
+
+        .portfolio-card {
+            transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+            overflow: hidden;
+        }
+
+        .portfolio-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 26px 60px rgba(25, 71, 161, 0.25);
+            border-color: rgba(143, 177, 255, 0.28);
+        }
+
+        .portfolio-image {
+            height: 200px;
+            border-radius: 20px;
+            overflow: hidden;
+            margin-bottom: 18px;
+            border: 1px solid rgba(143, 177, 255, 0.1);
+        }
+
+        .portfolio-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .portfolio-card:hover .portfolio-image img {
+            transform: scale(1.08);
+        }
+
+        .portfolio-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 8px;
+            font-size: 0.85rem;
+            color: #9ebcff;
+        }
+
+        .portfolio-meta span:last-child {
+            padding: 6px 10px;
+            border-radius: 999px;
+            background: rgba(63, 124, 255, 0.12);
+        }
+
+        .portfolio-card h3,
+        .timeline-card h3,
+        .contact-panel h3 {
+            font-size: 1.28rem;
+            margin-bottom: 8px;
+        }
+
+        .timeline {
+            position: relative;
+            display: grid;
+            gap: 14px;
+            margin-top: 16px;
+        }
+
+        .timeline::before {
+            content: "";
+            position: absolute;
+            left: 24px;
+            top: 10px;
+            bottom: 10px;
+            width: 1px;
+            background: linear-gradient(180deg, rgba(143, 177, 255, 0.5), rgba(143, 177, 255, 0.05));
+        }
+
+        .timeline-card {
+            position: relative;
+            margin-left: 58px;
+        }
+
+        .timeline-card::before {
+            content: "";
+            position: absolute;
+            left: -46px;
+            top: 38px;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: radial-gradient(circle, #8cb5ff, #3f7cff);
+            box-shadow: 0 0 0 10px rgba(63, 124, 255, 0.12);
+        }
+
+        .timeline-meta {
+            display: inline-flex;
+            padding: 8px 14px;
+            border-radius: 999px;
+            background: rgba(63, 124, 255, 0.12);
+            color: #b9ceff;
+            font-size: 0.86rem;
+            margin-bottom: 12px;
+        }
+
+        .timeline-role {
+            display: block;
+            font-size: 0.95rem;
+            color: #d7e4ff;
+            margin-bottom: 8px;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1.05fr 0.95fr;
+            gap: 16px;
+            align-items: stretch;
+        }
+
+        .contact-highlights {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 16px 0 18px;
+        }
+
+        .contact-highlights span {
+            display: inline-flex;
+            align-items: center;
+            padding: 9px 12px;
+            border-radius: 999px;
+            background: rgba(63, 124, 255, 0.1);
+            border: 1px solid rgba(143, 177, 255, 0.12);
+            color: #dbe7ff;
+            font-size: 0.9rem;
+        }
+
+        .contact-direct-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 12px;
+            margin-bottom: 18px;
+        }
+
+        .contact-direct-link {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 14px;
+            padding: 18px;
+            border-radius: 22px;
+            background: rgba(9, 22, 39, 0.72);
+            border: 1px solid rgba(143, 177, 255, 0.1);
+            transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .contact-direct-link:hover,
+        .contact-direct-link:focus-visible {
+            transform: translateY(-4px);
+            border-color: rgba(143, 177, 255, 0.28);
+            box-shadow: 0 16px 34px rgba(34, 82, 171, 0.2);
+        }
+
+        .contact-direct-link strong {
+            display: block;
+            font-size: 1rem;
+            color: #f3f7ff;
+        }
+
+        .contact-direct-link span {
+            display: block;
+            font-size: 0.85rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: #8fb1ff;
+            margin-bottom: 4px;
+        }
+
+        .contact-direct-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 16px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(63, 124, 255, 0.14);
+            border: 1px solid rgba(143, 177, 255, 0.12);
+            flex-shrink: 0;
+        }
+
+        .contact-direct-icon svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        .contact-form {
+            display: grid;
+            gap: 14px;
+        }
+
+        .contact-form label {
+            display: grid;
+            gap: 8px;
+            color: #dfe9ff;
+            font-size: 0.95rem;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            border: 1px solid rgba(143, 177, 255, 0.12);
+            background: rgba(8, 19, 34, 0.86);
+            color: var(--text);
+            padding: 15px 18px;
+            border-radius: 18px;
+            resize: vertical;
+            outline: none;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border-color: rgba(143, 177, 255, 0.34);
+            box-shadow: 0 0 0 4px rgba(63, 124, 255, 0.12);
+        }
+
+        .submit-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 15px 22px;
+            border: 0;
+            border-radius: 18px;
+            background: linear-gradient(135deg, #4d8cff, #2358cd);
+            color: white;
+            cursor: pointer;
+            box-shadow: 0 18px 36px rgba(36, 84, 191, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .submit-btn:hover,
+        .submit-btn:focus-visible {
+            transform: translateY(-3px);
+            box-shadow: 0 22px 42px rgba(36, 84, 191, 0.36);
+        }
+
+        .contact-info {
+            display: grid;
+            gap: 12px;
+            align-content: start;
+        }
+
+        .contact-item {
+            padding: 20px;
+            border-radius: 22px;
+            background: rgba(9, 22, 39, 0.72);
+            border: 1px solid rgba(143, 177, 255, 0.1);
+        }
+
+        .contact-item span {
+            display: block;
+            color: #94b2f5;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            font-size: 0.76rem;
+            margin-bottom: 6px;
+        }
+
+        .site-footer {
+            padding: 26px 0 32px;
+            border-top: 1px solid rgba(143, 177, 255, 0.08);
+        }
+
+        .footer-shell {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 12px;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(38px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+
+        .reveal.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @keyframes floatY {
+            0%,
+            100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @media (max-width: 1100px) {
+            .hero-shell,
+            .about-grid,
+            .skills-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-shell {
+                gap: 22px;
+                min-height: auto;
+            }
+
+            .hero-copy { order: 2; }
+            .hero-media { order: 1; }
+
+            .hero-side {
+                order: 3;
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+
+            .contact-direct-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .video-grid,
+            .portfolio-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .hero-media {
+                min-height: min(84vh, 780px);
+                padding-bottom: 58px;
+                transform: translateY(0);
+            }
+
+            .hero-vertical-tag {
+                right: -14px;
+                top: 90px;
+            }
+
+            .portrait-wrap {
+                min-height: min(78vh, 720px);
+            }
+        }
+
+        @media (max-width: 820px) {
+            .section {
+                padding: 54px 0;
+            }
+
+            .menu-toggle {
+                display: inline-flex;
+            }
+
+            .nav-links {
+                position: absolute;
+                top: calc(100% + 12px);
+                left: 16px;
+                right: 16px;
+                padding: 18px;
+                border-radius: 24px;
+                background: rgba(6, 15, 28, 0.95);
+                border: 1px solid rgba(143, 177, 255, 0.1);
+                backdrop-filter: blur(18px);
+                display: grid;
+                gap: 8px;
+                box-shadow: var(--shadow);
+                opacity: 0;
+                pointer-events: none;
+                transform: translateY(-10px);
+                transition: opacity 0.28s ease, transform 0.28s ease;
+            }
+
+            .site-header.menu-open .nav-links {
+                opacity: 1;
+                pointer-events: auto;
+                transform: translateY(0);
+            }
+
+            .nav-links a {
+                padding: 14px 12px;
+                border-radius: 16px;
+                background: rgba(9, 22, 39, 0.66);
+            }
+
+            .nav-links a::after {
+                display: none;
+            }
+
+            .hero {
+                min-height: auto;
+                padding-top: 8px;
+            }
+
+            .hero-media {
+                transform: translateY(0);
+                min-height: auto;
+                padding-bottom: 50px;
+            }
+
+            .hero-copy::before,
+            .hero-vertical-tag {
+                display: none;
+            }
+
+            .hero-side,
+            .stats-grid,
+            .skills-grid,
+            .video-grid,
+            .portfolio-grid,
+            .contact-direct-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .video-modal {
+                padding: 14px;
+            }
+
+            .video-modal-dialog {
+                padding: 14px;
+                border-radius: 22px;
+            }
+
+            .video-play {
+                left: 14px;
+                bottom: 14px;
+                padding: 10px 14px;
+            }
+
+            .portrait-wrap {
+                min-height: min(68vh, 620px);
+            }
+
+            .hero-stat-card {
+                width: min(92%, 360px);
+                bottom: 0;
+            }
+
+            .footer-shell {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        @media (max-width: 560px) {
+            :root {
+                --container: min(100% - 20px, 100% - 20px);
+            }
+
+            .nav-shell {
+                min-height: 76px;
+            }
+
+            h1 {
+                font-size: clamp(2.7rem, 12vw, 4.2rem);
+            }
+
+            h2 {
+                font-size: clamp(2rem, 10vw, 3rem);
+            }
+
+            .about-copy,
+            .stats-card,
+            .skill-card,
+            .video-card,
+            .portfolio-card,
+            .timeline-card,
+            .contact-panel {
+                padding: 24px;
+            }
+
+            .timeline-card {
+                margin-left: 42px;
+            }
+
+            .timeline-card::before {
+                left: -34px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header" id="home">
+        <div class="container nav-shell">
+            <a class="brand" href="#home" aria-label="Tatang RW Home">
+                <span class="brand-mark">TR</span>
+                <span>Tatang RW</span>
+            </a>
+            <nav class="nav-links" aria-label="Main navigation">
+                <a href="#home" class="active">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#video">Video</a>
+                <a href="#experience">Experience</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero section">
+            <div class="container hero-shell">
+                <div class="hero-copy reveal">
+                    <span class="eyebrow">Hello I'm</span>
+                    <div class="hero-topline">
+                        <span class="hero-line"></span>
+                        <span class="hero-micro">Premium Digital Portfolio</span>
+                    </div>
+                    <div class="hero-badges">
+                        <span class="hero-badge">Bandung Based</span>
+                        <span class="hero-badge">5+ Tahun Experience</span>
+                        <span class="hero-badge">Available for Project</span>
+                    </div>
+                    <h1>
+                        Tatang Roswandi<br>
+                        <span class="accent-line">Ganda Wijaya</span>
+                    </h1>
+                    <div class="role">Fullstack Developer</div>
+                    <p>Membantu bisnis berkembang melalui solusi digital modern seperti website, ERP, dashboard, mobile apps, dan automation system.</p>
+                    <div class="hero-actions">
+                        <a class="primary-btn" href="#portfolio">Lihat Portfolio</a>
+                        <a class="secondary-btn" href="#contact">Hubungi Saya</a>
+                        <a class="floating-arrow" href="#about" aria-label="Scroll to about section">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M12 5v14"></path>
+                                <path d="m5 12 7 7 7-7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                    <p class="hero-support">Solusi yang saya bangun berfokus pada pengalaman pengguna yang jelas, visual premium, dan alur bisnis yang efisien dari sisi operasional hingga pengambilan keputusan.</p>
+                    <div class="hero-signature">
+                        <div>
+                            <span>Specialized In</span>
+                            <strong>Website, ERP, Dashboard, Automation</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-media reveal">
+                    <div class="hero-vertical-tag">Creative Developer Portfolio</div>
+                    <div class="portrait-wrap">
+                        <img class="portrait" src="https://images.unsplash.com/photo-1504257432389-52343af06ae3?auto=format&fit=crop&w=1200&q=80" alt="Portrait profesional full body Tatang Roswandi Ganda Wijaya">
+                    </div>
+                    <div class="hero-stat-card glass-card">
+                        <ul>
+                            <li>100+ Project selesai</li>
+                            <li>5+ Tahun pengalaman</li>
+                            <li>Available for freelance</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="hero-side reveal">
+                    <article class="info-card featured">
+                        <span class="info-label">Available Now</span>
+                        <h3>About Me</h3>
+                        <p>Berpengalaman membangun sistem modern yang stabil, mudah dipakai, dan siap dikembangkan.</p>
+                    </article>
+                    <article class="info-card">
+                        <h3>My Work</h3>
+                        <p>ERP, Web App, Landing Page, POS, Dashboard, Mobile App.</p>
+                        <ul class="detail-list">
+                            <li><span>Spesialisasi</span><strong>Fullstack</strong></li>
+                            <li><span>Fokus</span><strong>User Friendly UI</strong></li>
+                            <li><span>Support</span><strong>Maintenance &amp; Iteration</strong></li>
+                        </ul>
+                    </article>
+                    <article class="info-card">
+                        <h3>Follow</h3>
+                        <p>Terhubung untuk update project, insight, dan diskusi kolaborasi digital.</p>
+                        <div class="social-list">
+                            <a class="social-pill" href="https://linkedin.com/in/tatangrw" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+                                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.94 8.5H3.56V20h3.38V8.5Zm.22-3.55C7.16 3.87 6.34 3 5.27 3S3.38 3.87 3.38 4.95 4.2 6.88 5.27 6.88s1.89-.86 1.89-1.93ZM20.62 13c0-3.47-1.85-5.08-4.31-5.08-1.99 0-2.88 1.09-3.38 1.85V8.5H9.56c.04.84 0 11.5 0 11.5h3.37v-6.42c0-.34.03-.67.13-.91.27-.67.9-1.36 1.95-1.36 1.38 0 1.93 1.03 1.93 2.54V20h3.38v-7Z"></path></svg>
+                            </a>
+                            <a class="social-pill" href="https://github.com/tatangrw" target="_blank" rel="noreferrer" aria-label="GitHub">
+                                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.58 2 12.23c0 4.51 2.87 8.34 6.84 9.69.5.09.68-.22.68-.49 0-.24-.01-1.04-.01-1.88-2.78.62-3.37-1.21-3.37-1.21-.46-1.18-1.11-1.49-1.11-1.49-.91-.64.07-.62.07-.62 1 .08 1.53 1.06 1.53 1.06.9 1.57 2.36 1.12 2.94.86.09-.67.35-1.13.63-1.39-2.22-.26-4.55-1.14-4.55-5.08 0-1.12.39-2.03 1.03-2.74-.1-.26-.45-1.3.1-2.71 0 0 .84-.27 2.75 1.05A9.3 9.3 0 0 1 12 6.89c.85 0 1.71.12 2.51.35 1.91-1.32 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.71 1.03 1.62 1.03 2.74 0 3.95-2.34 4.82-4.57 5.08.36.32.68.95.68 1.92 0 1.39-.01 2.5-.01 2.84 0 .27.18.59.69.49A10.27 10.27 0 0 0 22 12.23C22 6.58 17.52 2 12 2Z"></path></svg>
+                            </a>
+                            <a class="social-pill" href="https://instagram.com/tatangrw.dev" target="_blank" rel="noreferrer" aria-label="Instagram">
+                                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.75A4 4 0 0 0 3.75 7.75v8.5a4 4 0 0 0 4 4h8.5a4 4 0 0 0 4-4v-8.5a4 4 0 0 0-4-4h-8.5Zm8.94 1.31a1.19 1.19 0 1 1 0 2.38 1.19 1.19 0 0 1 0-2.38ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 1.75A3.25 3.25 0 1 0 12 15.25 3.25 3.25 0 0 0 12 8.75Z"></path></svg>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="about">
+            <div class="container about-grid">
+                <div class="about-copy glass-card reveal">
+                    <span class="eyebrow">About Me</span>
+                    <h2>Digital solutions developer with <span class="accent-line">business mindset</span></h2>
+                    <p>Saya adalah Fullstack Developer dengan pengalaman membangun sistem ERP, POS, dashboard bisnis, website company profile, landing page modern, hingga automation system. Fokus saya bukan hanya membuat sistem terlihat bagus, tetapi juga memastikan alur penggunaan sederhana, cepat dipahami, dan nyaman dipakai oleh user dari berbagai level.</p>
+                    <div class="stats-grid">
+                        <div class="stat-box"><strong>5+</strong><p>Tahun pengalaman</p></div>
+                        <div class="stat-box"><strong>100+</strong><p>Project selesai</p></div>
+                        <div class="stat-box"><strong>80+</strong><p>Client puas</p></div>
+                    </div>
+                </div>
+                <aside class="stats-card glass-card reveal">
+                    <div class="mini-line">
+                        <span class="eyebrow">Focus Area</span>
+                        <p>Website premium, ERP modular, dashboard eksekutif, POS, dan automasi operasional yang efisien.</p>
+                    </div>
+                    <div class="mini-line">
+                        <span class="eyebrow">Approach</span>
+                        <p>Menggabungkan UI modern, arsitektur backend rapi, dan alur penggunaan yang jelas agar user cepat adaptasi.</p>
+                    </div>
+                    <div>
+                        <span class="eyebrow">Result</span>
+                        <p>Solusi digital yang cepat diluncurkan, mudah dipakai, minim kebingungan user, dan relevan untuk pertumbuhan bisnis.</p>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <section class="section" id="skills">
+            <div class="container skills-shell">
+                <div class="section-heading reveal">
+                    <span class="eyebrow">Core Skills</span>
+                    <h2>20 Keahlian Utama</h2>
+                    <p>Keahlian teknis dan bisnis yang paling sering saya gunakan untuk membangun produk digital yang stabil, mudah dipakai, dan relevan dengan kebutuhan operasional.</p>
+                </div>
+                <div class="skills-grid">
+                    <article class="skill-card glass-card reveal" style="--skill-score: 92%;"><div class="skill-head"><span class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="2.5"></rect><path d="M10 5.5h4"></path><path d="M11 18.5h2"></path></svg></span><div class="skill-main"><div class="skill-top"><h3>Android</h3><span class="skill-level">Advanced</span></div><span class="skill-meta">Mobile Development</span></div></div><p>Membangun aplikasi Android untuk kebutuhan operasional, monitoring, dan workflow internal.</p><div class="skill-progress"><div class="skill-progress-top"><span>Capability Score</span><strong>92%</strong></div><div class="skill-progress-track"><span class="skill-progress-bar"></span></div></div></article>
+                    <article class="skill-card glass-card reveal" style="--skill-score: 80%;"><div class="skill-head"><span class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="2.5"></rect><path d="M10 5.5h4"></path><path d="M11 18.5h2"></path></svg></span><div class="skill-main"><div class="skill-top"><h3>iOS</h3><span class="skill-level">Intermediate</span></div><span class="skill-meta">Mobile Development</span></div></div><p>Menyusun pengalaman aplikasi iOS yang bersih, ringan, dan fokus pada alur pengguna.</p><div class="skill-progress"><div class="skill-progress-top"><span>Capability Score</span><strong>80%</strong></div><div class="skill-progress-track"><span class="skill-progress-bar"></span></div></div></article>
+                    <article class="skill-card glass-card reveal" style="--skill-score: 93%;"><div class="skill-head"><span class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 7h16"></path><path d="M6 12h12"></path><path d="M8 17h8"></path><rect x="3" y="4" width="18" height="16" rx="3"></rect></svg></span><div class="skill-main"><div class="skill-top"><h3>Golang</h3><span class="skill-level">Advanced</span></div><span class="skill-meta">Backend Service</span></div></div><p>Membangun API, service modular, dan proses backend yang cepat serta efisien.</p><div class="skill-progress"><div class="skill-progress-top"><span>Capability Score</span><strong>93%</strong></div><div class="skill-progress-track"><span class="skill-progress-bar"></span></div></div></article>
+                    <article class="skill-card glass-card reveal" style="--skill-score: 94%;"><div class="skill-head"><span class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 7h16"></path><path d="M4 12h16"></path><path d="M4 17h10"></path><rect x="3" y="4" width="18" height="16" rx="3"></rect></svg></span><div class="skill-main"><div class="skill-top"><h3>ERP</h3><span class="skill-level">Advanced</span></div><span class="skill-meta">Business System</span></div></div><p>Merancang modul ERP untuk finance, inventory, purchasing, HR, dan approval process.</p><div class="skill-progress"><div class="skill-progress-top"><span>Capability Score</span><strong>94%</strong></div><div class="skill-progress-track"><span class="skill-progress-bar"></span></div></div></article>
+                    <article class="skill-card glass-card reveal" style="--skill-score: 91%;"><div class="skill-head"><span class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 7h12"></path><path d="M8 12h8"></path><path d="M6 17h12"></path><rect x="4" y="4" width="16" height="16" rx="3"></rect></svg></span><div class="skill-main"><div class="skill-top"><h3>POS System</h3><span class="skill-level">Advanced</span></div><span class="skill-meta">Retail Platform</span></div></div><p>Mengembangkan sistem kasir digital yang mudah dipakai dan terhubung ke laporan bisnis.</p><div class="skill-progress"><div class="skill-progress-top"><span>Capability Score</span><strong>91%</strong></div><div class="skill-progress-track"><span class="skill-progress-bar"></span></div></div></article>
+                    <article class="skill-card glass-card reveal" style="--skill-score: 93%;"><div class="skill-head"><span class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 18V9"></path><path d="M12 18V5"></path><path d="M19 18v-7"></path></svg></span><div class="skill-main"><div class="skill-top"><h3>Dashboard KPI</h3><span class="skill-level">Advanced</span></div><span class="skill-meta">Analytics</span></div></div><p>Mendesain dashboard eksekutif untuk membaca performa bisnis secara cepat dan jelas.</p><div class="skill-progress"><div class="skill-progress-top"><span>Capability Score</span><strong>93%</strong></div><div class="skill-progress-track"><span class="skill-progress-bar"></span></div></div></article>
+                    <article class="skill-card glass-card reveal" style="--skill-score: 94%;"><div class="skill-head"><span class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 6h16"></path><path d="M4 12h16"></path><path d="M4 18h10"></path></svg></span><div class="skill-main"><div class="skill-top"><h3>Frontend Web</h3><span class="skill-level">Advanced</span></div><span class="skill-meta">User Interface</span></div></div><p>Membangun antarmuka modern, responsif, dan fokus pada user flow yang sederhana.</p><div class="skill-progress"><div class="skill-progress-top"><span>Capability Score</span><strong>94%</strong></div><div class="skill-progress-track"><span class="skill-progress-bar"></span></div></div></article>
+                    <article class="skill-card glass-card reveal" style="--skill-score: 92%;"><div class="skill-head"><span class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M8 7h8"></path><path d="M6 12h12"></path><path d="M10 17h4"></path><rect x="3" y="4" width="18" height="16" rx="4"></rect></svg></span><div class="skill-main"><div class="skill-top"><h3>Backend API</h3><span class="skill-level">Advanced</span></div><span class="skill-meta">System Integration</span></div></div><p>Mengembangkan REST API dan service integrasi untuk sinkronisasi data lintas sistem.</p><div class="skill-progress"><div class="skill-progress-top"><span>Capability Score</span><strong>92%</strong></div><div class="skill-progress-track"><span class="skill-progress-bar"></span></div></div></article>
+                    <article class="skill-card glass-card reveal" style="--skill-score: 89%;"><div class="skill-head"><span class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><ellipse cx="12" cy="6" rx="6.5" ry="2.5"></ellipse><path d="M5.5 6v6c0 1.38 2.91 2.5 6.5 2.5s6.5-1.12 6.5-2.5V6"></path><path d="M5.5 12v6c0 1.38 2.91 2.5 6.5 2.5s6.5-1.12 6.5-2.5v-6"></path></svg></span><div class="skill-main"><div class="skill-top"><h3>Database Design</h3><span class="skill-level">Advanced</span></div><span class="skill-meta">Data Architecture</span></div></div><p>Menyusun struktur database yang efisien, rapi, dan mudah dikembangkan.</p><div class="skill-progress"><div class="skill-progress-top"><span>Capability Score</span><strong>89%</strong></div><div class="skill-progress-track"><span class="skill-progress-bar"></span></div></div></article>
+                    <article class="skill-card glass-card reveal" style="--skill-score: 80%;"><div class="skill-head"><span class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 3v4"></path><path d="M12 17v4"></path><path d="M3 12h4"></path><path d="M17 12h4"></path><circle cx="12" cy="12" r="4"></circle></svg></span><div class="skill-main"><div class="skill-top"><h3>DevOps</h3><span class="skill-level">Intermediate</span></div><span class="skill-meta">Deployment</span></div></div><p>Mengelola workflow build, deploy, monitoring service, dan otomasi environment.</p><div class="skill-progress"><div class="skill-progress-top"><span>Capability Score</span><strong>80%</strong></div><div class="skill-progress-track"><span class="skill-progress-bar"></span></div></div></article>
+                    <article class="skill-card glass-card reveal" style="--skill-score: 78%;"><div class="skill-head"><span class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 8h16"></path><path d="M7 12h10"></path><path d="M9 16h6"></path><rect x="3" y="5" width="18" height="14" rx="3"></rect></svg></span><div class="skill-main"><div class="skill-top"><h3>Docker</h3><span class="skill-level">Intermediate</span></div><span class="skill-meta">Containerization</span></div></div><p>Menyusun lingkungan aplikasi yang konsisten untuk development dan production.</p><div class="skill-progress"><div class="skill-progress-top"><span>Capability Score</span><strong>78%</strong></div><div class="skill-progress-track"><span class="skill-progress-bar"></span></div></div></article>
+                    <article class="skill-card glass-card reveal" style="--skill-score: 91%;"><div class="skill-head"><span class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 19 10 13"></path><path d="M10 13 14 17 20 7"></path><path d="M14 7h6v6"></path></svg></span><div class="skill-main"><div class="skill-top"><h3>System Analysis</h3><span class="skill-level">Advanced</span></div><span class="skill-meta">Requirement Mapping</span></div></div><p>Menggali kebutuhan bisnis, memetakan proses, dan menyusun scope sistem yang realistis.</p><div class="skill-progress"><div class="skill-progress-top"><span>Capability Score</span><strong>91%</strong></div><div class="skill-progress-track"><span class="skill-progress-bar"></span></div></div></article>
+                    <article class="skill-card glass-card reveal" style="--skill-score: 92%;"><div class="skill-head"><span class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 18h16"></path><path d="M7 14V9"></path><path d="M12 14V6"></path><path d="M17 14v-3"></path></svg></span><div class="skill-main"><div class="skill-top"><h3>Business Analysis</h3><span class="skill-level">Advanced</span></div><span class="skill-meta">Process Improvement</span></div></div><p>Membaca pain point operasional dan menerjemahkannya menjadi solusi digital yang terarah.</p><div class="skill-progress"><div class="skill-progress-top"><span>Capability Score</span><strong>92%</strong></div><div class="skill-progress-track"><span class="skill-progress-bar"></span></div></div></article>
+                    <article class="skill-card glass-card reveal" style="--skill-score: 90%;"><div class="skill-head"><span class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 5h14v14H5z"></path><path d="M9 9h6"></path><path d="M9 12h6"></path><path d="M9 15h4"></path></svg></span><div class="skill-main"><div class="skill-top"><h3>UI Design</h3><span class="skill-level">Advanced</span></div><span class="skill-meta">Visual Design</span></div></div><p>Menyusun tampilan aplikasi yang premium, konsisten, dan mudah dipahami user.</p><div class="skill-progress"><div class="skill-progress-top"><span>Capability Score</span><strong>90%</strong></div><div class="skill-progress-track"><span class="skill-progress-bar"></span></div></div></article>
+                    <article class="skill-card glass-card reveal" style="--skill-score: 92%;"><div class="skill-head"><span class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 7h14"></path><path d="M5 12h9"></path><path d="M5 17h6"></path><circle cx="18" cy="17" r="2"></circle></svg></span><div class="skill-main"><div class="skill-top"><h3>UX Flow</h3><span class="skill-level">Advanced</span></div><span class="skill-meta">User Journey</span></div></div><p>Merancang alur layar dan interaksi agar proses penggunaan terasa cepat dan jelas.</p><div class="skill-progress"><div class="skill-progress-top"><span>Capability Score</span><strong>92%</strong></div><div class="skill-progress-track"><span class="skill-progress-bar"></span></div></div></article>
+                    <article class="skill-card glass-card reveal" style="--skill-score: 91%;"><div class="skill-head"><span class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M7 12h10"></path><path d="M12 7v10"></path><circle cx="12" cy="12" r="8"></circle></svg></span><div class="skill-main"><div class="skill-top"><h3>Automation</h3><span class="skill-level">Advanced</span></div><span class="skill-meta">Workflow Efficiency</span></div></div><p>Mengurangi pekerjaan manual dengan automasi approval, notifikasi, dan sinkronisasi data.</p><div class="skill-progress"><div class="skill-progress-top"><span>Capability Score</span><strong>91%</strong></div><div class="skill-progress-track"><span class="skill-progress-bar"></span></div></div></article>
+                    <article class="skill-card glass-card reveal" style="--skill-score: 79%;"><div class="skill-head"><span class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 8h16"></path><path d="M4 16h16"></path><path d="M8 8v8"></path><path d="M16 8v8"></path></svg></span><div class="skill-main"><div class="skill-top"><h3>Microservices</h3><span class="skill-level">Intermediate</span></div><span class="skill-meta">Scalable Architecture</span></div></div><p>Menyusun service modular untuk kebutuhan sistem yang berkembang secara bertahap.</p><div class="skill-progress"><div class="skill-progress-top"><span>Capability Score</span><strong>79%</strong></div><div class="skill-progress-track"><span class="skill-progress-bar"></span></div></div></article>
+                    <article class="skill-card glass-card reveal" style="--skill-score: 80%;"><div class="skill-head"><span class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 3 4 7v5c0 4.4 3.3 7.95 8 9 4.7-1.05 8-4.6 8-9V7l-8-4Z"></path><path d="M9 12h6"></path></svg></span><div class="skill-main"><div class="skill-top"><h3>Cloud Deployment</h3><span class="skill-level">Intermediate</span></div><span class="skill-meta">Infrastructure</span></div></div><p>Menyiapkan deployment aplikasi ke server cloud dengan struktur yang lebih aman dan rapi.</p><div class="skill-progress"><div class="skill-progress-top"><span>Capability Score</span><strong>80%</strong></div><div class="skill-progress-track"><span class="skill-progress-bar"></span></div></div></article>
+                    <article class="skill-card glass-card reveal" style="--skill-score: 90%;"><div class="skill-head"><span class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 18V9"></path><path d="M12 18V6"></path><path d="M18 18v-4"></path><path d="M4 18h16"></path></svg></span><div class="skill-main"><div class="skill-top"><h3>Reporting System</h3><span class="skill-level">Advanced</span></div><span class="skill-meta">Management Insight</span></div></div><p>Menyusun laporan visual dan sistem pelaporan yang mendukung keputusan manajemen.</p><div class="skill-progress"><div class="skill-progress-top"><span>Capability Score</span><strong>90%</strong></div><div class="skill-progress-track"><span class="skill-progress-bar"></span></div></div></article>
+                    <article class="skill-card glass-card reveal" style="--skill-score: 92%;"><div class="skill-head"><span class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M8 8h8"></path><path d="M8 16h8"></path><path d="M4 12h4"></path><path d="M16 12h4"></path><circle cx="12" cy="12" r="8"></circle></svg></span><div class="skill-main"><div class="skill-top"><h3>Integration System</h3><span class="skill-level">Advanced</span></div><span class="skill-meta">Data Flow</span></div></div><p>Menghubungkan aplikasi, dashboard, dan modul bisnis agar pertukaran data lebih lancar.</p><div class="skill-progress"><div class="skill-progress-top"><span>Capability Score</span><strong>92%</strong></div><div class="skill-progress-track"><span class="skill-progress-bar"></span></div></div></article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="portfolio">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <span class="eyebrow">Selected Work</span>
+                    <h2>My Portfolio</h2>
+                    <p>Kumpulan project dummy berdasarkan kategori layanan utama agar portfolio lebih terstruktur dan mudah dijelajahi.</p>
+                </div>
+                <div class="tab-group reveal" data-tab-group>
+                    <div class="tab-controls" role="tablist" aria-label="Portfolio category tabs">
+                        <button class="tab-button is-active" type="button" role="tab" aria-selected="true" data-tab-target="ecommerce">Ecommerce</button>
+                        <button class="tab-button" type="button" role="tab" aria-selected="false" data-tab-target="erp">ERP</button>
+                        <button class="tab-button" type="button" role="tab" aria-selected="false" data-tab-target="crypto">Chripto</button>
+                        <button class="tab-button" type="button" role="tab" aria-selected="false" data-tab-target="devops">Dev Ops</button>
+                        <button class="tab-button" type="button" role="tab" aria-selected="false" data-tab-target="business-analysis">Bisnis &amp; System Analisis</button>
+                    </div>
+
+                    <div class="tab-panel is-active" data-tab-panel="ecommerce">
+                        <div class="tab-summary"><p>10 dummy project ecommerce dengan fokus checkout, katalog, promosi, dan dashboard penjualan.</p><span>10 Project Dummy</span></div>
+                        <div class="portfolio-grid">
+                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=900&q=80" alt="Ecommerce project 1"></div><div class="portfolio-meta"><span>Ecommerce</span><span>Retail</span></div><h3>ShopSphere Commerce</h3><p>Platform toko online modern untuk katalog multi-brand dan checkout cepat.</p></article>
+                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=900&q=80" alt="Ecommerce project 2"></div><div class="portfolio-meta"><span>Ecommerce</span><span>Fashion</span></div><h3>Velora Fashion Store</h3><p>Landing ecommerce premium untuk brand fashion dengan experience mobile-first.</p></article>
+                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80" alt="Ecommerce project 3"></div><div class="portfolio-meta"><span>Ecommerce</span><span>Catalog</span></div><h3>DailyMart Catalog Hub</h3><p>Katalog digital harian lengkap dengan pencarian cepat dan filter produk dinamis.</p></article>
+                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=80" alt="Ecommerce project 4"></div><div class="portfolio-meta"><span>Ecommerce</span><span>Checkout</span></div><h3>QuickCart Checkout</h3><p>Sistem checkout sederhana untuk mengurangi drop-off dan mempercepat pembayaran.</p></article>
+                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80" alt="Ecommerce project 5"></div><div class="portfolio-meta"><span>Ecommerce</span><span>B2B</span></div><h3>Wholesale Connect</h3><p>Portal pemesanan grosir digital untuk distributor dan reseller skala bisnis.</p></article>
+                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1498049794561-7780e7231661?auto=format&fit=crop&w=900&q=80" alt="Ecommerce project 6"></div><div class="portfolio-meta"><span>Ecommerce</span><span>Analytics</span></div><h3>Commerce Insight Board</h3><p>Dashboard performa penjualan ecommerce dengan KPI produk dan campaign.</p></article>
+                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80" alt="Ecommerce project 7"></div><div class="portfolio-meta"><span>Ecommerce</span><span>Marketing</span></div><h3>Promo Engine Suite</h3><p>Panel promosi untuk voucher, bundling, flash sale, dan loyalty campaign.</p></article>
+                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1516382799247-87df95d790b7?auto=format&fit=crop&w=900&q=80" alt="Ecommerce project 8"></div><div class="portfolio-meta"><span>Ecommerce</span><span>Beauty</span></div><h3>GlowCart Beauty Shop</h3><p>Toko online produk beauty dengan review, membership, dan repeat-order flow.</p></article>
+                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1515169067868-5387ec356754?auto=format&fit=crop&w=900&q=80" alt="Ecommerce project 9"></div><div class="portfolio-meta"><span>Ecommerce</span><span>Food</span></div><h3>FreshBox Grocery App</h3><p>Ecommerce groceries dengan penjadwalan pengiriman dan kontrol stok realtime.</p></article>
+                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=900&q=80" alt="Ecommerce project 10"></div><div class="portfolio-meta"><span>Ecommerce</span><span>Marketplace</span></div><h3>Merchant One Portal</h3><p>Portal merchant untuk mengelola toko, katalog, pesanan, dan performa kampanye.</p></article>
+                        </div>
+                    </div>
+
+                    <div class="tab-panel" data-tab-panel="erp">
+                        <div class="tab-summary"><p>10 dummy project ERP untuk finance, HR, inventory, purchasing, dan operasional.</p><span>10 Project Dummy</span></div>
+                        <div class="portfolio-grid">
+                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=80" alt="ERP project 1"></div><div class="portfolio-meta"><span>ERP</span><span>Finance</span></div><h3>Finance Core ERP</h3><p>Modul finance untuk cashflow, jurnal, approval, dan monitoring anggaran.</p></article>
+                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=900&q=80" alt="ERP project 2"></div><div class="portfolio-meta"><span>ERP</span><span>HRIS</span></div><h3>People Flow HRIS</h3><p>Pengelolaan absensi, payroll, cuti, dan data karyawan dalam satu platform.</p></article>
+                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80" alt="ERP project 3"></div><div class="portfolio-meta"><span>ERP</span><span>Inventory</span></div><h3>Inventory Matrix</h3><p>Kontrol stok lintas gudang dengan alert minimum stock dan mutasi realtime.</p></article>
+                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=900&q=80" alt="ERP project 4"></div><div class="portfolio-meta"><span>ERP</span><span>Procurement</span></div><h3>Smart Procurement</h3><p>Alur purchasing digital dari request, approval, PO, sampai supplier evaluation.</p></article>
+                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80" alt="ERP project 5"></div><div class="portfolio-meta"><span>ERP</span><span>Manufacture</span></div><h3>Factory Operations Hub</h3><p>Modul produksi untuk planning, work order, dan efisiensi lini manufaktur.</p></article>
+                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=900&q=80" alt="ERP project 6"></div><div class="portfolio-meta"><span>ERP</span><span>CRM</span></div><h3>Client CRM Suite</h3><p>CRM terintegrasi dengan pipeline sales, follow-up, dan histori interaksi customer.</p></article>
+                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=900&q=80" alt="ERP project 7"></div><div class="portfolio-meta"><span>ERP</span><span>Project</span></div><h3>Project Delivery ERP</h3><p>Project management internal untuk timeline, resource allocation, dan costing.</p></article>
+                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=900&q=80" alt="ERP project 8"></div><div class="portfolio-meta"><span>ERP</span><span>Admin</span></div><h3>Backoffice Command</h3><p>Pusat operasional administrasi untuk dokumen, user role, dan approval process.</p></article>
+                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=80" alt="ERP project 9"></div><div class="portfolio-meta"><span>ERP</span><span>Executive</span></div><h3>Executive KPI Monitor</h3><p>Dashboard eksekutif yang menampilkan KPI bisnis utama secara ringkas dan cepat.</p></article>
+                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=900&q=80" alt="ERP project 10"></div><div class="portfolio-meta"><span>ERP</span><span>Integration</span></div><h3>ERP Integration Gateway</h3><p>Jembatan integrasi data antar sistem untuk operasional yang lebih sinkron.</p></article>
+                        </div>
+                    </div>
+
+                    <div class="tab-panel" data-tab-panel="crypto">
+                        <div class="tab-summary"><p>10 dummy project chripto untuk dashboard aset, trading monitor, wallet, dan analytic tools.</p><span>10 Project Dummy</span></div>
+                        <div class="portfolio-grid">
+                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1621761191319-c6fb62004040?auto=format&fit=crop&w=900&q=80" alt="Crypto project 1"></div><div class="portfolio-meta"><span>Chripto</span><span>Wallet</span></div><h3>CoinVault Wallet UI</h3><p>Antarmuka wallet modern untuk melihat saldo, transaksi, dan portofolio aset digital.</p></article>
+                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1640161704729-cbe966a08476?auto=format&fit=crop&w=900&q=80" alt="Crypto project 2"></div><div class="portfolio-meta"><span>Chripto</span><span>Trading</span></div><h3>TradePulse Station</h3><p>Panel trading monitor dengan watchlist, market depth, dan alert pergerakan harga.</p></article>
+                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=900&q=80" alt="Crypto project 3"></div><div class="portfolio-meta"><span>Chripto</span><span>NFT</span></div><h3>NFT Gallery Board</h3><p>Showcase NFT collection dengan rarity info dan activity stream yang menarik.</p></article>
+                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1642052502120-19e2ddf25a90?auto=format&fit=crop&w=900&q=80" alt="Crypto project 4"></div><div class="portfolio-meta"><span>Chripto</span><span>Analytics</span></div><h3>Chain Metrics Lab</h3><p>Dashboard analytics untuk volume, holder growth, dan performa token secara realtime.</p></article>
+                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1621504450181-5d356f61d307?auto=format&fit=crop&w=900&q=80" alt="Crypto project 5"></div><div class="portfolio-meta"><span>Chripto</span><span>Staking</span></div><h3>StakeFlow Portal</h3><p>Platform staking sederhana untuk reward tracking dan kalkulasi estimasi hasil.</p></article>
+                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1622630998477-20aa696ecb05?auto=format&fit=crop&w=900&q=80" alt="Crypto project 6"></div><div class="portfolio-meta"><span>Chripto</span><span>Exchange</span></div><h3>Exchange Admin Hub</h3><p>Panel admin exchange untuk user activity, liquidity watch, dan issue monitoring.</p></article>
+                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1639322537228-f710d846310a?auto=format&fit=crop&w=900&q=80" alt="Crypto project 7"></div><div class="portfolio-meta"><span>Chripto</span><span>Research</span></div><h3>Token Research Desk</h3><p>Workspace riset token dengan scorecard fundamental dan technical summary.</p></article>
+                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1639762681057-408e52192e55?auto=format&fit=crop&w=900&q=80" alt="Crypto project 8"></div><div class="portfolio-meta"><span>Chripto</span><span>DeFi</span></div><h3>DeFi Position Tracker</h3><p>Pelacak posisi DeFi untuk liquidity pool, farming reward, dan risk exposure.</p></article>
+                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1642104704074-907c0698cbd9?auto=format&fit=crop&w=900&q=80" alt="Crypto project 9"></div><div class="portfolio-meta"><span>Chripto</span><span>Security</span></div><h3>Wallet Risk Scanner</h3><p>Monitoring transaksi wallet dan deteksi awal aktivitas yang berisiko tinggi.</p></article>
+                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1644361566696-3d7a5b5ed6c1?auto=format&fit=crop&w=900&q=80" alt="Crypto project 10"></div><div class="portfolio-meta"><span>Chripto</span><span>Mobile</span></div><h3>Crypto Mobile Insight</h3><p>Ringkasan portofolio chripto mobile dengan grafik aset dan notifikasi pintar.</p></article>
+                        </div>
+                    </div>
+
+                    <div class="tab-panel" data-tab-panel="devops">
+                        <div class="tab-summary"><p>10 dummy project Dev Ops untuk observability, CI/CD, infrastructure, dan deployment automation.</p><span>10 Project Dummy</span></div>
+                        <div class="portfolio-grid">
+                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1516321165247-4aa89a48be28?auto=format&fit=crop&w=900&q=80" alt="DevOps project 1"></div><div class="portfolio-meta"><span>Dev Ops</span><span>CI/CD</span></div><h3>Pipeline Automation Pro</h3><p>Setup pipeline CI/CD untuk build, test, deploy, dan release monitoring otomatis.</p></article>
+                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80" alt="DevOps project 2"></div><div class="portfolio-meta"><span>Dev Ops</span><span>Cloud</span></div><h3>Cloud Infra Control</h3><p>Dashboard infrastruktur cloud untuk memantau service health dan resource cost.</p></article>
+                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=900&q=80" alt="DevOps project 3"></div><div class="portfolio-meta"><span>Dev Ops</span><span>Monitoring</span></div><h3>Service Watchtower</h3><p>Sistem observability dengan alert uptime, error logs, dan latency analysis.</p></article>
+                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=900&q=80" alt="DevOps project 4"></div><div class="portfolio-meta"><span>Dev Ops</span><span>Deploy</span></div><h3>Release Manager Board</h3><p>Kontrol deployment multi-environment untuk staging, production, dan rollback.</p></article>
+                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=900&q=80" alt="DevOps project 5"></div><div class="portfolio-meta"><span>Dev Ops</span><span>Container</span></div><h3>Container Ops Center</h3><p>Pengelolaan container dan cluster dengan insight performa serta autoscaling.</p></article>
+                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=900&q=80" alt="DevOps project 6"></div><div class="portfolio-meta"><span>Dev Ops</span><span>Logs</span></div><h3>Central Log Stream</h3><p>Pengumpulan log terpusat untuk debugging cepat dan analisis insiden aplikasi.</p></article>
+                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1504639725590-34d0984388bd?auto=format&fit=crop&w=900&q=80" alt="DevOps project 7"></div><div class="portfolio-meta"><span>Dev Ops</span><span>Security</span></div><h3>Security Patch Tracker</h3><p>Monitoring patch security, vulnerability status, dan tindakan mitigasi service.</p></article>
+                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=900&q=80" alt="DevOps project 8"></div><div class="portfolio-meta"><span>Dev Ops</span><span>Automation</span></div><h3>Infra Script Library</h3><p>Koleksi automation script untuk provisioning, maintenance, dan backup rutin.</p></article>
+                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80" alt="DevOps project 9"></div><div class="portfolio-meta"><span>Dev Ops</span><span>Team Ops</span></div><h3>Team Delivery Metrics</h3><p>Panel metrik delivery engineering untuk lead time, release frequency, dan failure rate.</p></article>
+                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=900&q=80" alt="DevOps project 10"></div><div class="portfolio-meta"><span>Dev Ops</span><span>Backup</span></div><h3>Disaster Recovery Desk</h3><p>Rancangan dashboard backup dan recovery untuk menjaga continuity sistem bisnis.</p></article>
+                        </div>
+                    </div>
+
+                    <div class="tab-panel" data-tab-panel="business-analysis">
+                        <div class="tab-summary"><p>10 dummy project bisnis &amp; system analisis untuk requirement mapping, process design, dan KPI.</p><span>10 Project Dummy</span></div>
+                        <div class="portfolio-grid">
+                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=900&q=80" alt="Business analysis project 1"></div><div class="portfolio-meta"><span>Analysis</span><span>KPI</span></div><h3>Executive KPI Blueprint</h3><p>Perancangan KPI dashboard untuk manajemen dengan fokus insight yang actionable.</p></article>
+                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80" alt="Business analysis project 2"></div><div class="portfolio-meta"><span>Analysis</span><span>Workflow</span></div><h3>Workflow Mapping Suite</h3><p>Dokumentasi alur bisnis dan redesign proses untuk meningkatkan efisiensi kerja.</p></article>
+                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=900&q=80" alt="Business analysis project 3"></div><div class="portfolio-meta"><span>Analysis</span><span>Requirement</span></div><h3>Requirement Discovery Lab</h3><p>Workshop kebutuhan sistem dengan output scope, pain point, dan prioritas fitur.</p></article>
+                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=900&q=80" alt="Business analysis project 4"></div><div class="portfolio-meta"><span>Analysis</span><span>UX Flow</span></div><h3>User Flow Audit</h3><p>Analisis user journey agar sistem lebih mudah dipakai dan mengurangi friction.</p></article>
+                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80" alt="Business analysis project 5"></div><div class="portfolio-meta"><span>Analysis</span><span>ERP Scope</span></div><h3>ERP Scope Planner</h3><p>Pemetaan modul ERP yang relevan berdasarkan struktur proses dan kebutuhan divisi.</p></article>
+                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80" alt="Business analysis project 6"></div><div class="portfolio-meta"><span>Analysis</span><span>BI</span></div><h3>Business Insight Framework</h3><p>Framework pelaporan bisnis untuk membantu manajemen membaca performa lebih cepat.</p></article>
+                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=80" alt="Business analysis project 7"></div><div class="portfolio-meta"><span>Analysis</span><span>System</span></div><h3>System Audit Matrix</h3><p>Audit sistem lama untuk melihat bottleneck, technical debt, dan arah pengembangan.</p></article>
+                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=900&q=80" alt="Business analysis project 8"></div><div class="portfolio-meta"><span>Analysis</span><span>Roadmap</span></div><h3>Digital Roadmap Plan</h3><p>Peta jalan transformasi digital bertahap agar investasi sistem lebih terarah.</p></article>
+                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=900&q=80" alt="Business analysis project 9"></div><div class="portfolio-meta"><span>Analysis</span><span>Operations</span></div><h3>Operational Gap Review</h3><p>Review proses operasional untuk menentukan prioritas automasi dan integrasi sistem.</p></article>
+                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=900&q=80" alt="Business analysis project 10"></div><div class="portfolio-meta"><span>Analysis</span><span>Docs</span></div><h3>Specification Documentation</h3><p>Dokumentasi kebutuhan sistem, user story, dan acceptance criteria yang lebih jelas.</p></article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="video">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <span class="eyebrow">Video Showcase</span>
+                    <h2>Youtube Video</h2>
+                    <p>Kumpulan 10 card video YouTube untuk menampilkan konten edukasi, demo produk, atau materi presentasi digital dalam tampilan yang tetap rapi.</p>
+                </div>
+                <div class="video-grid">
+                    <article class="video-card glass-card reveal">
+                        <div class="video-frame"><button class="video-trigger" type="button" data-video-id="M7lc1UVf-VE" data-video-title="Demo Dashboard ERP Modern" aria-label="Putar video Demo Dashboard ERP Modern"><img src="https://i.ytimg.com/vi/M7lc1UVf-VE/hqdefault.jpg" alt="Thumbnail Demo Dashboard ERP Modern"><span class="video-tag">YouTube</span><span class="video-play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 6.82v10.36c0 .79.87 1.27 1.54.84l8.14-5.18a1 1 0 0 0 0-1.68L9.54 5.98A1 1 0 0 0 8 6.82Z"></path></svg><span>Play Video</span></span></button></div>
+                        <div>
+                            <h3>Demo Dashboard ERP Modern</h3>
+                            <p>Preview alur dashboard operasional dengan fokus data, approval, dan monitoring realtime.</p>
+                        </div>
+                    </article>
+                    <article class="video-card glass-card reveal">
+                        <div class="video-frame"><button class="video-trigger" type="button" data-video-id="ysz5S6PUM-U" data-video-title="Presentasi Website Company Profile" aria-label="Putar video Presentasi Website Company Profile"><img src="https://i.ytimg.com/vi/ysz5S6PUM-U/hqdefault.jpg" alt="Thumbnail Presentasi Website Company Profile"><span class="video-tag">YouTube</span><span class="video-play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 6.82v10.36c0 .79.87 1.27 1.54.84l8.14-5.18a1 1 0 0 0 0-1.68L9.54 5.98A1 1 0 0 0 8 6.82Z"></path></svg><span>Play Video</span></span></button></div>
+                        <div>
+                            <h3>Presentasi Website Company Profile</h3>
+                            <p>Contoh video presentasi landing page premium dengan navigasi jelas dan visual yang kuat.</p>
+                        </div>
+                    </article>
+                    <article class="video-card glass-card reveal">
+                        <div class="video-frame"><button class="video-trigger" type="button" data-video-id="aqz-KE-bpKQ" data-video-title="Workflow Automation Overview" aria-label="Putar video Workflow Automation Overview"><img src="https://i.ytimg.com/vi/aqz-KE-bpKQ/hqdefault.jpg" alt="Thumbnail Workflow Automation Overview"><span class="video-tag">YouTube</span><span class="video-play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 6.82v10.36c0 .79.87 1.27 1.54.84l8.14-5.18a1 1 0 0 0 0-1.68L9.54 5.98A1 1 0 0 0 8 6.82Z"></path></svg><span>Play Video</span></span></button></div>
+                        <div>
+                            <h3>Workflow Automation Overview</h3>
+                            <p>Video dummy untuk menampilkan alur otomasi kerja dari request masuk sampai approval akhir.</p>
+                        </div>
+                    </article>
+                    <article class="video-card glass-card reveal">
+                        <div class="video-frame"><button class="video-trigger" type="button" data-video-id="ScMzIvxBSi4" data-video-title="UI Dashboard Analytics" aria-label="Putar video UI Dashboard Analytics"><img src="https://i.ytimg.com/vi/ScMzIvxBSi4/hqdefault.jpg" alt="Thumbnail UI Dashboard Analytics"><span class="video-tag">YouTube</span><span class="video-play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 6.82v10.36c0 .79.87 1.27 1.54.84l8.14-5.18a1 1 0 0 0 0-1.68L9.54 5.98A1 1 0 0 0 8 6.82Z"></path></svg><span>Play Video</span></span></button></div>
+                        <div>
+                            <h3>UI Dashboard Analytics</h3>
+                            <p>Showcase card video untuk kebutuhan portfolio analytics, KPI, dan executive reporting.</p>
+                        </div>
+                    </article>
+                    <article class="video-card glass-card reveal">
+                        <div class="video-frame"><button class="video-trigger" type="button" data-video-id="jNQXAC9IVRw" data-video-title="Product Walkthrough Ecommerce" aria-label="Putar video Product Walkthrough Ecommerce"><img src="https://i.ytimg.com/vi/jNQXAC9IVRw/hqdefault.jpg" alt="Thumbnail Product Walkthrough Ecommerce"><span class="video-tag">YouTube</span><span class="video-play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 6.82v10.36c0 .79.87 1.27 1.54.84l8.14-5.18a1 1 0 0 0 0-1.68L9.54 5.98A1 1 0 0 0 8 6.82Z"></path></svg><span>Play Video</span></span></button></div>
+                        <div>
+                            <h3>Product Walkthrough Ecommerce</h3>
+                            <p>Card video untuk demo katalog, cart, checkout, dan promosi pada platform ecommerce.</p>
+                        </div>
+                    </article>
+                    <article class="video-card glass-card reveal">
+                        <div class="video-frame"><button class="video-trigger" type="button" data-video-id="e-ORhEE9VVg" data-video-title="Brand Campaign Motion" aria-label="Putar video Brand Campaign Motion"><img src="https://i.ytimg.com/vi/e-ORhEE9VVg/hqdefault.jpg" alt="Thumbnail Brand Campaign Motion"><span class="video-tag">YouTube</span><span class="video-play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 6.82v10.36c0 .79.87 1.27 1.54.84l8.14-5.18a1 1 0 0 0 0-1.68L9.54 5.98A1 1 0 0 0 8 6.82Z"></path></svg><span>Play Video</span></span></button></div>
+                        <div>
+                            <h3>Brand Campaign Motion</h3>
+                            <p>Contoh tampilan video campaign digital untuk kebutuhan promosi brand dan awareness.</p>
+                        </div>
+                    </article>
+                    <article class="video-card glass-card reveal">
+                        <div class="video-frame"><button class="video-trigger" type="button" data-video-id="LXb3EKWsInQ" data-video-title="DevOps Monitoring Session" aria-label="Putar video DevOps Monitoring Session"><img src="https://i.ytimg.com/vi/LXb3EKWsInQ/hqdefault.jpg" alt="Thumbnail DevOps Monitoring Session"><span class="video-tag">YouTube</span><span class="video-play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 6.82v10.36c0 .79.87 1.27 1.54.84l8.14-5.18a1 1 0 0 0 0-1.68L9.54 5.98A1 1 0 0 0 8 6.82Z"></path></svg><span>Play Video</span></span></button></div>
+                        <div>
+                            <h3>DevOps Monitoring Session</h3>
+                            <p>Video dummy untuk memvisualkan observability, logs, alerting, dan performa service.</p>
+                        </div>
+                    </article>
+                    <article class="video-card glass-card reveal">
+                        <div class="video-frame"><button class="video-trigger" type="button" data-video-id="2Vv-BfVoq4g" data-video-title="Mobile App Feature Showcase" aria-label="Putar video Mobile App Feature Showcase"><img src="https://i.ytimg.com/vi/2Vv-BfVoq4g/hqdefault.jpg" alt="Thumbnail Mobile App Feature Showcase"><span class="video-tag">YouTube</span><span class="video-play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 6.82v10.36c0 .79.87 1.27 1.54.84l8.14-5.18a1 1 0 0 0 0-1.68L9.54 5.98A1 1 0 0 0 8 6.82Z"></path></svg><span>Play Video</span></span></button></div>
+                        <div>
+                            <h3>Mobile App Feature Showcase</h3>
+                            <p>Card video untuk demo onboarding, notifikasi, dan fitur inti aplikasi mobile bisnis.</p>
+                        </div>
+                    </article>
+                    <article class="video-card glass-card reveal">
+                        <div class="video-frame"><button class="video-trigger" type="button" data-video-id="kXYiU_JCYtU" data-video-title="Business System Presentation" aria-label="Putar video Business System Presentation"><img src="https://i.ytimg.com/vi/kXYiU_JCYtU/hqdefault.jpg" alt="Thumbnail Business System Presentation"><span class="video-tag">YouTube</span><span class="video-play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 6.82v10.36c0 .79.87 1.27 1.54.84l8.14-5.18a1 1 0 0 0 0-1.68L9.54 5.98A1 1 0 0 0 8 6.82Z"></path></svg><span>Play Video</span></span></button></div>
+                        <div>
+                            <h3>Business System Presentation</h3>
+                            <p>Video presentasi untuk menjelaskan pain point, solusi sistem, dan manfaat implementasi.</p>
+                        </div>
+                    </article>
+                    <article class="video-card glass-card reveal">
+                        <div class="video-frame"><button class="video-trigger" type="button" data-video-id="fLexgOxsZu0" data-video-title="Premium Portfolio Showcase" aria-label="Putar video Premium Portfolio Showcase"><img src="https://i.ytimg.com/vi/fLexgOxsZu0/hqdefault.jpg" alt="Thumbnail Premium Portfolio Showcase"><span class="video-tag">YouTube</span><span class="video-play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 6.82v10.36c0 .79.87 1.27 1.54.84l8.14-5.18a1 1 0 0 0 0-1.68L9.54 5.98A1 1 0 0 0 8 6.82Z"></path></svg><span>Play Video</span></span></button></div>
+                        <div>
+                            <h3>Premium Portfolio Showcase</h3>
+                            <p>Contoh penutup section video untuk menampilkan hasil akhir portfolio visual yang lebih hidup.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="experience">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <span class="eyebrow">Career Path</span>
+                    <h2>Experience</h2>
+                    <p>Pengalaman kerja dibagi menjadi dua kategori agar perjalanan full time dan freelance lebih mudah dibaca.</p>
+                </div>
+                <div class="tab-group reveal" data-tab-group>
+                    <div class="tab-controls" role="tablist" aria-label="Experience category tabs">
+                        <button class="tab-button is-active" type="button" role="tab" aria-selected="true" data-tab-target="full-time">Full Time</button>
+                        <button class="tab-button" type="button" role="tab" aria-selected="false" data-tab-target="freelance">Freelance</button>
+                    </div>
+                    <div class="tab-panel is-active" data-tab-panel="full-time">
+                        <div class="tab-summary"><p>6 dummy pengalaman full time di perusahaan teknologi, media digital, konsultan sistem, dan product team.</p><span>6 Data</span></div>
+                        <div class="timeline">
+                            <article class="timeline-card glass-card reveal"><span class="timeline-meta">2025 - Sekarang</span><h3>PT Digital Nusantara</h3><span class="timeline-role">Senior Fullstack Developer</span><p>Mengembangkan ERP dashboard, workflow automation, dan modernisasi modul operasional.</p></article>
+                            <article class="timeline-card glass-card reveal"><span class="timeline-meta">2024 - 2025</span><h3>PT Cloud Integrasi Asia</h3><span class="timeline-role">Platform Engineer</span><p>Membangun portal internal dan dashboard monitoring untuk tim delivery cloud service.</p></article>
+                            <article class="timeline-card glass-card reveal"><span class="timeline-meta">2023 - 2024</span><h3>PT Solusi Teknologi Indonesia</h3><span class="timeline-role">Fullstack Web Developer</span><p>Membangun web app internal, integrasi data, dan dashboard manajemen lintas divisi.</p></article>
+                            <article class="timeline-card glass-card reveal"><span class="timeline-meta">2022 - 2023</span><h3>PT Kreasi Digital Media</h3><span class="timeline-role">Front-End &amp; UI Developer</span><p>Mengerjakan website company profile, landing page, dan peningkatan user flow digital campaign.</p></article>
+                            <article class="timeline-card glass-card reveal"><span class="timeline-meta">2021 - 2022</span><h3>PT Inovasi Sistem Cerdas</h3><span class="timeline-role">System Developer</span><p>Mengembangkan modul POS, dashboard bisnis, serta fitur reporting untuk operasional harian.</p></article>
+                            <article class="timeline-card glass-card reveal"><span class="timeline-meta">2020 - 2021</span><h3>PT Data Progresif Konsultan</h3><span class="timeline-role">Junior Analyst Developer</span><p>Mendukung analisis kebutuhan sistem, dokumentasi teknis, dan implementasi dashboard awal.</p></article>
+                        </div>
+                    </div>
+                    <div class="tab-panel" data-tab-panel="freelance">
+                        <div class="tab-summary"><p>6 dummy pengalaman freelance untuk UMKM, startup, corporate, dan proyek konsultasi digital.</p><span>6 Data</span></div>
+                        <div class="timeline">
+                            <article class="timeline-card glass-card reveal"><span class="timeline-meta">2025</span><h3>Freelance ERP Consultant</h3><span class="timeline-role">ERP Dashboard Specialist</span><p>Membantu perusahaan distribusi menyusun dashboard monitoring penjualan dan stok.</p></article>
+                            <article class="timeline-card glass-card reveal"><span class="timeline-meta">2025</span><h3>Startup SaaS Project</h3><span class="timeline-role">Product Web Developer</span><p>Mengembangkan MVP dashboard SaaS dengan fokus onboarding user dan analytics.</p></article>
+                            <article class="timeline-card glass-card reveal"><span class="timeline-meta">2024</span><h3>UMKM Retail Modern</h3><span class="timeline-role">POS &amp; Commerce Builder</span><p>Membangun POS sederhana dan landing ecommerce untuk bisnis retail skala berkembang.</p></article>
+                            <article class="timeline-card glass-card reveal"><span class="timeline-meta">2024</span><h3>Corporate Website Revamp</h3><span class="timeline-role">UI-Focused Front-End Developer</span><p>Redesign website corporate agar lebih premium, responsif, dan mudah dipahami user.</p></article>
+                            <article class="timeline-card glass-card reveal"><span class="timeline-meta">2023</span><h3>Business Dashboard Project</h3><span class="timeline-role">Dashboard &amp; Reporting Partner</span><p>Menyusun laporan visual KPI dan panel monitoring performa untuk tim manajemen.</p></article>
+                            <article class="timeline-card glass-card reveal"><span class="timeline-meta">2023</span><h3>Digital Process Review</h3><span class="timeline-role">Business &amp; System Analyst</span><p>Menganalisis alur bisnis klien dan merancang roadmap digitalisasi bertahap.</p></article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="contact">
+            <div class="container contact-grid">
+                <div class="contact-panel glass-card reveal">
+                    <span class="eyebrow">Contact</span>
+                    <h2>Let's Work Together</h2>
+                    <p>Hubungi langsung lewat social media, email, atau WhatsApp untuk diskusi project, konsultasi kebutuhan sistem, dan peluang kolaborasi.</p>
+                    <div class="contact-highlights">
+                        <span>Konsultasi project</span>
+                        <span>UI user friendly</span>
+                        <span>Support after launch</span>
+                    </div>
+                    <div class="contact-direct-grid">
+                        <a class="contact-direct-link" href="mailto:hello@tatangrw.dev" aria-label="Email Tatang">
+                            <div><span>Email</span><strong>hello@tatangrw.dev</strong></div>
+                            <div class="contact-direct-icon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 5.75A2.75 2.75 0 0 1 5.75 3h12.5A2.75 2.75 0 0 1 21 5.75v12.5A2.75 2.75 0 0 1 18.25 21H5.75A2.75 2.75 0 0 1 3 18.25V5.75Zm2.12.28 6.47 5.18a.66.66 0 0 0 .82 0l6.47-5.18a1 1 0 0 0-.63-.28H5.75c-.23 0-.45.1-.63.28Zm14.13 1.5-5.96 4.77a2.41 2.41 0 0 1-2.98 0L4.75 7.53v10.72c0 .55.45 1 1 1h12.5c.55 0 1-.45 1-1V7.53Z"></path></svg></div>
+                        </a>
+                        <a class="contact-direct-link" href="https://wa.me/6281234567890" target="_blank" rel="noreferrer" aria-label="WhatsApp Tatang">
+                            <div><span>WhatsApp</span><strong>+62 812-3456-7890</strong></div>
+                            <div class="contact-direct-icon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.5 2 2 6.42 2 11.88c0 1.74.47 3.44 1.36 4.93L2 22l5.4-1.41a10.17 10.17 0 0 0 4.64 1.11h.01c5.54 0 10.04-4.42 10.04-9.88C22.09 6.42 17.58 2 12.04 2Zm.01 17.97a8.5 8.5 0 0 1-4.33-1.18l-.31-.18-3.2.84.85-3.11-.2-.32a8.1 8.1 0 0 1-1.28-4.2c0-4.49 3.79-8.14 8.45-8.14 2.26 0 4.38.87 5.97 2.45a8 8 0 0 1 2.48 5.69c0 4.49-3.79 8.15-8.43 8.15Zm4.63-6.08c-.25-.12-1.46-.71-1.68-.79-.22-.08-.38-.12-.54.12-.16.24-.62.79-.76.95-.14.16-.28.18-.53.06-.25-.12-1.05-.38-2-1.21-.74-.64-1.24-1.43-1.39-1.67-.14-.24-.01-.37.11-.49.11-.11.25-.28.37-.42.12-.14.16-.24.25-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.29-.74-1.76-.2-.48-.4-.41-.54-.41h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2 0 1.18.86 2.31.98 2.47.12.16 1.68 2.65 4.16 3.61 2.47.96 2.47.64 2.91.6.44-.04 1.46-.58 1.66-1.14.2-.56.2-1.05.14-1.14-.06-.1-.23-.16-.48-.28Z"></path></svg></div>
+                        </a>
+                        <a class="contact-direct-link" href="https://linkedin.com/in/tatangrw" target="_blank" rel="noreferrer" aria-label="LinkedIn Tatang">
+                            <div><span>LinkedIn</span><strong>linkedin.com/in/tatangrw</strong></div>
+                            <div class="contact-direct-icon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.94 8.5H3.56V20h3.38V8.5Zm.22-3.55C7.16 3.87 6.34 3 5.27 3S3.38 3.87 3.38 4.95 4.2 6.88 5.27 6.88s1.89-.86 1.89-1.93ZM20.62 13c0-3.47-1.85-5.08-4.31-5.08-1.99 0-2.88 1.09-3.38 1.85V8.5H9.56c.04.84 0 11.5 0 11.5h3.37v-6.42c0-.34.03-.67.13-.91.27-.67.9-1.36 1.95-1.36 1.38 0 1.93 1.03 1.93 2.54V20h3.38v-7Z"></path></svg></div>
+                        </a>
+                        <a class="contact-direct-link" href="https://github.com/tatangrw" target="_blank" rel="noreferrer" aria-label="GitHub Tatang">
+                            <div><span>GitHub</span><strong>github.com/tatangrw</strong></div>
+                            <div class="contact-direct-icon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.58 2 12.23c0 4.51 2.87 8.34 6.84 9.69.5.09.68-.22.68-.49 0-.24-.01-1.04-.01-1.88-2.78.62-3.37-1.21-3.37-1.21-.46-1.18-1.11-1.49-1.11-1.49-.91-.64.07-.62.07-.62 1 .08 1.53 1.06 1.53 1.06.9 1.57 2.36 1.12 2.94.86.09-.67.35-1.13.63-1.39-2.22-.26-4.55-1.14-4.55-5.08 0-1.12.39-2.03 1.03-2.74-.1-.26-.45-1.3.1-2.71 0 0 .84-.27 2.75 1.05A9.3 9.3 0 0 1 12 6.89c.85 0 1.71.12 2.51.35 1.91-1.32 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.71 1.03 1.62 1.03 2.74 0 3.95-2.34 4.82-4.57 5.08.36.32.68.95.68 1.92 0 1.39-.01 2.5-.01 2.84 0 .27.18.59.69.49A10.27 10.27 0 0 0 22 12.23C22 6.58 17.52 2 12 2Z"></path></svg></div>
+                        </a>
+                    </div>
+                    <form class="contact-form">
+                        <label>Nama<input type="text" name="nama" placeholder="Masukkan nama Anda"></label>
+                        <label>Email<input type="email" name="email" placeholder="Masukkan email Anda"></label>
+                        <label>Pesan<textarea name="pesan" rows="5" placeholder="Tulis kebutuhan project Anda"></textarea></label>
+                        <button class="submit-btn" type="submit">Kirim Pesan</button>
+                    </form>
+                </div>
+                <aside class="contact-info reveal">
+                    <div class="contact-item glass-card"><span>Email</span><h3>hello@tatangrw.dev</h3><p>Email utama untuk project inquiry, proposal kerja sama, dan penjadwalan meeting awal.</p></div>
+                    <div class="contact-item glass-card"><span>WhatsApp</span><h3>+62 812-3456-7890</h3><p>Kanal tercepat untuk diskusi singkat, follow up kebutuhan fitur, dan konsultasi awal.</p></div>
+                    <div class="contact-item glass-card"><span>Instagram</span><h3>@tatangrw.dev</h3><p>Tempat berbagi update visual project, insight digital product, dan aktivitas kreatif.</p></div>
+                    <div class="contact-item glass-card"><span>Lokasi</span><h3>Bandung</h3><p>Melayani project remote, hybrid, maupun kolaborasi onsite sesuai kebutuhan bisnis.</p></div>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <div class="video-modal" id="videoModal" aria-hidden="true">
+        <div class="video-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="videoModalTitle">
+            <div class="video-modal-head">
+                <h3 id="videoModalTitle">Youtube Video</h3>
+                <button class="video-modal-close" type="button" aria-label="Tutup video">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                        <path d="M6 6 18 18"></path>
+                        <path d="M18 6 6 18"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="video-modal-frame">
+                <iframe id="videoModalFrame" title="Youtube Video Player" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="container footer-shell">
+            <div class="footer-social">
+                <a class="social-pill" href="https://linkedin.com/in/tatangrw" target="_blank" rel="noreferrer" aria-label="LinkedIn Footer"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.94 8.5H3.56V20h3.38V8.5Zm.22-3.55C7.16 3.87 6.34 3 5.27 3S3.38 3.87 3.38 4.95 4.2 6.88 5.27 6.88s1.89-.86 1.89-1.93ZM20.62 13c0-3.47-1.85-5.08-4.31-5.08-1.99 0-2.88 1.09-3.38 1.85V8.5H9.56c.04.84 0 11.5 0 11.5h3.37v-6.42c0-.34.03-.67.13-.91.27-.67.9-1.36 1.95-1.36 1.38 0 1.93 1.03 1.93 2.54V20h3.38v-7Z"></path></svg></a>
+                <a class="social-pill" href="https://github.com/tatangrw" target="_blank" rel="noreferrer" aria-label="GitHub Footer"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.58 2 12.23c0 4.51 2.87 8.34 6.84 9.69.5.09.68-.22.68-.49 0-.24-.01-1.04-.01-1.88-2.78.62-3.37-1.21-3.37-1.21-.46-1.18-1.11-1.49-1.11-1.49-.91-.64.07-.62.07-.62 1 .08 1.53 1.06 1.53 1.06.9 1.57 2.36 1.12 2.94.86.09-.67.35-1.13.63-1.39-2.22-.26-4.55-1.14-4.55-5.08 0-1.12.39-2.03 1.03-2.74-.1-.26-.45-1.3.1-2.71 0 0 .84-.27 2.75 1.05A9.3 9.3 0 0 1 12 6.89c.85 0 1.71.12 2.51.35 1.91-1.32 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.71 1.03 1.62 1.03 2.74 0 3.95-2.34 4.82-4.57 5.08.36.32.68.95.68 1.92 0 1.39-.01 2.5-.01 2.84 0 .27.18.59.69.49A10.27 10.27 0 0 0 22 12.23C22 6.58 17.52 2 12 2Z"></path></svg></a>
+                <a class="social-pill" href="https://instagram.com/tatangrw.dev" target="_blank" rel="noreferrer" aria-label="Instagram Footer"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.75A4 4 0 0 0 3.75 7.75v8.5a4 4 0 0 0 4 4h8.5a4 4 0 0 0 4-4v-8.5a4 4 0 0 0-4-4h-8.5Zm8.94 1.31a1.19 1.19 0 1 1 0 2.38 1.19 1.19 0 0 1 0-2.38ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 1.75A3.25 3.25 0 1 0 12 15.25 3.25 3.25 0 0 0 12 8.75Z"></path></svg></a>
+            </div>
+            <p>&copy; 2026 Tatang Roswandi Ganda Wijaya</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
