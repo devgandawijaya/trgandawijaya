@@ -187,20 +187,84 @@ Array.from(document.querySelectorAll('[data-tab-group]')).forEach((group) => {
 });
 
 const contactForm = document.querySelector('.contact-form');
+const whatsappNumber = '6282218866002';
+const contactEmail = 'devgandawijaya@gmail.com';
+
+const setContactButtonState = (button, nextLabel) => {
+    if (!button) {
+        return;
+    }
+
+    const initialText = button.dataset.initialText || button.textContent;
+
+    if (!button.dataset.initialText) {
+        button.dataset.initialText = initialText;
+    }
+
+    button.textContent = nextLabel;
+    button.disabled = true;
+
+    window.setTimeout(() => {
+        button.textContent = initialText;
+        button.disabled = false;
+    }, 1800);
+};
+
+const buildContactDraft = () => {
+    if (!contactForm) {
+        return null;
+    }
+
+    const name = contactForm.querySelector('[name="nama"]')?.value.trim() || 'Website visitor';
+    const email = contactForm.querySelector('[name="email"]')?.value.trim() || 'Not provided';
+    const message = contactForm.querySelector('[name="pesan"]')?.value.trim() || 'Halo, saya ingin berdiskusi lebih lanjut terkait project atau kebutuhan sistem.';
+    const subject = `Portfolio inquiry from ${name}`;
+    const lines = [
+        'Halo Tatang,',
+        '',
+        'Saya menghubungi Anda dari website portfolio.',
+        '',
+        `Nama: ${name}`,
+        `Email: ${email}`,
+        '',
+        'Pesan:',
+        message,
+    ];
+
+    return {
+        subject,
+        body: lines.join('\n'),
+    };
+};
+
+const openContactChannel = (channel, triggerButton) => {
+    const draft = buildContactDraft();
+
+    if (!draft) {
+        return;
+    }
+
+    if (channel === 'email') {
+        const mailtoUrl = `mailto:${contactEmail}?subject=${encodeURIComponent(draft.subject)}&body=${encodeURIComponent(draft.body)}`;
+        window.location.href = mailtoUrl;
+        setContactButtonState(triggerButton, 'Opening Email');
+        return;
+    }
+
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(draft.body)}`;
+    window.open(whatsappUrl, '_blank', 'noopener');
+    setContactButtonState(triggerButton, 'Opening WhatsApp');
+};
 
 contactForm?.addEventListener('submit', (event) => {
     event.preventDefault();
     const submitButton = contactForm.querySelector('.submit-btn');
-    const initialText = submitButton.textContent;
 
-    submitButton.textContent = 'Pesan Terkirim';
-    submitButton.disabled = true;
+    openContactChannel('whatsapp', submitButton);
+});
 
-    window.setTimeout(() => {
-        submitButton.textContent = initialText;
-        submitButton.disabled = false;
-        contactForm.reset();
-    }, 1800);
+contactForm?.querySelector('[data-contact-channel="email"]')?.addEventListener('click', (event) => {
+    openContactChannel('email', event.currentTarget);
 });
 
 updateHeaderState();

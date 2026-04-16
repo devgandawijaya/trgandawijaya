@@ -417,6 +417,35 @@
             color: #b8c8e8;
         }
 
+        .hero-quick-links {
+            margin-top: 16px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .hero-quick-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 11px 16px;
+            border-radius: 999px;
+            border: 1px solid rgba(143, 177, 255, 0.16);
+            background: rgba(9, 20, 36, 0.82);
+            color: #e7f0ff;
+            font-size: 0.94rem;
+            transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+        }
+
+        .hero-quick-link:hover,
+        .hero-quick-link:focus-visible {
+            transform: translateY(-2px);
+            border-color: rgba(143, 177, 255, 0.28);
+            background: rgba(13, 28, 48, 0.92);
+        }
+
         .hero-signature {
             margin-top: 18px;
             display: inline-flex;
@@ -1308,6 +1337,13 @@
             gap: 14px;
         }
 
+        .contact-form-actions {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
         .contact-form label {
             display: grid;
             gap: 8px;
@@ -1353,6 +1389,22 @@
         .submit-btn:focus-visible {
             transform: translateY(-3px);
             box-shadow: 0 22px 42px rgba(36, 84, 191, 0.36);
+        }
+
+        .submit-btn.is-secondary {
+            background: rgba(10, 25, 43, 0.82);
+            border: 1px solid rgba(143, 177, 255, 0.16);
+            box-shadow: none;
+        }
+
+        .submit-btn.is-secondary:hover,
+        .submit-btn.is-secondary:focus-visible {
+            box-shadow: none;
+        }
+
+        .contact-form-note {
+            color: #9eb1d0;
+            font-size: 0.92rem;
         }
 
         .contact-info {
@@ -1650,6 +1702,10 @@
                         </a>
                     </div>
                     <p class="hero-support">The solutions I build focus on clear user experience, premium visual quality, and efficient business workflows that support both operations and decision-making.</p>
+                    <div class="hero-quick-links">
+                        <a class="hero-quick-link" href="https://wa.me/6282218866002" target="_blank" rel="noreferrer">WhatsApp: 0822-1886-6002</a>
+                        <a class="hero-quick-link" href="mailto:devgandawijaya@gmail.com">Email: devgandawijaya@gmail.com</a>
+                    </div>
                     <div class="hero-signature">
                         <div>
                             <span>Specialized In</span>
@@ -1691,13 +1747,13 @@
                         <h3>Follow</h3>
                         <p>Connect for project updates, digital product insights, and collaboration discussions.</p>
                         <div class="social-list">
-                            <a class="social-pill" href="https://linkedin.com/in/tatangrw" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+                            <a class="social-pill" href="https://www.linkedin.com/in/tatang-roswandi-ganda-wijaya-b0851725b/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
                                 <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.94 8.5H3.56V20h3.38V8.5Zm.22-3.55C7.16 3.87 6.34 3 5.27 3S3.38 3.87 3.38 4.95 4.2 6.88 5.27 6.88s1.89-.86 1.89-1.93ZM20.62 13c0-3.47-1.85-5.08-4.31-5.08-1.99 0-2.88 1.09-3.38 1.85V8.5H9.56c.04.84 0 11.5 0 11.5h3.37v-6.42c0-.34.03-.67.13-.91.27-.67.9-1.36 1.95-1.36 1.38 0 1.93 1.03 1.93 2.54V20h3.38v-7Z"></path></svg>
                             </a>
-                            <a class="social-pill" href="https://github.com/tatangrw" target="_blank" rel="noreferrer" aria-label="GitHub">
+                            <a class="social-pill" href="https://github.com/devgandawijaya" target="_blank" rel="noreferrer" aria-label="GitHub">
                                 <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.58 2 12.23c0 4.51 2.87 8.34 6.84 9.69.5.09.68-.22.68-.49 0-.24-.01-1.04-.01-1.88-2.78.62-3.37-1.21-3.37-1.21-.46-1.18-1.11-1.49-1.11-1.49-.91-.64.07-.62.07-.62 1 .08 1.53 1.06 1.53 1.06.9 1.57 2.36 1.12 2.94.86.09-.67.35-1.13.63-1.39-2.22-.26-4.55-1.14-4.55-5.08 0-1.12.39-2.03 1.03-2.74-.1-.26-.45-1.3.1-2.71 0 0 .84-.27 2.75 1.05A9.3 9.3 0 0 1 12 6.89c.85 0 1.71.12 2.51.35 1.91-1.32 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.71 1.03 1.62 1.03 2.74 0 3.95-2.34 4.82-4.57 5.08.36.32.68.95.68 1.92 0 1.39-.01 2.5-.01 2.84 0 .27.18.59.69.49A10.27 10.27 0 0 0 22 12.23C22 6.58 17.52 2 12 2Z"></path></svg>
                             </a>
-                            <a class="social-pill" href="https://instagram.com/tatangrw.dev" target="_blank" rel="noreferrer" aria-label="Instagram">
+                            <a class="social-pill" href="https://instagram.com/mr_gwg" target="_blank" rel="noreferrer" aria-label="Instagram">
                                 <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.75A4 4 0 0 0 3.75 7.75v8.5a4 4 0 0 0 4 4h8.5a4 4 0 0 0 4-4v-8.5a4 4 0 0 0-4-4h-8.5Zm8.94 1.31a1.19 1.19 0 1 1 0 2.38 1.19 1.19 0 0 1 0-2.38ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 1.75A3.25 3.25 0 1 0 12 15.25 3.25 3.25 0 0 0 12 8.75Z"></path></svg>
                             </a>
                         </div>
@@ -1788,82 +1844,53 @@
                     </div>
 
                     <div class="tab-panel is-active" data-tab-panel="ecommerce">
-                        <div class="tab-summary"><p>10 dummy project ecommerce dengan fokus checkout, katalog, promosi, dan dashboard penjualan.</p><span>10 Project Dummy</span></div>
+                        <div class="tab-summary"><p>Selected ecommerce platforms and marketplace projects covering retail, brand commerce, and digital ordering experiences.</p><span>7 Projects</span></div>
                         <div class="portfolio-grid">
-                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=900&q=80" alt="Ecommerce project 1"></div><div class="portfolio-meta"><span>Ecommerce</span><span>Retail</span></div><h3>ShopSphere Commerce</h3><p>Platform toko online modern untuk katalog multi-brand dan checkout cepat.</p></article>
-                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=900&q=80" alt="Ecommerce project 2"></div><div class="portfolio-meta"><span>Ecommerce</span><span>Fashion</span></div><h3>Velora Fashion Store</h3><p>Landing ecommerce premium untuk brand fashion dengan experience mobile-first.</p></article>
-                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80" alt="Ecommerce project 3"></div><div class="portfolio-meta"><span>Ecommerce</span><span>Catalog</span></div><h3>DailyMart Catalog Hub</h3><p>Katalog digital harian lengkap dengan pencarian cepat dan filter produk dinamis.</p></article>
-                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=80" alt="Ecommerce project 4"></div><div class="portfolio-meta"><span>Ecommerce</span><span>Checkout</span></div><h3>QuickCart Checkout</h3><p>Sistem checkout sederhana untuk mengurangi drop-off dan mempercepat pembayaran.</p></article>
-                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80" alt="Ecommerce project 5"></div><div class="portfolio-meta"><span>Ecommerce</span><span>B2B</span></div><h3>Wholesale Connect</h3><p>Portal pemesanan grosir digital untuk distributor dan reseller skala bisnis.</p></article>
-                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1498049794561-7780e7231661?auto=format&fit=crop&w=900&q=80" alt="Ecommerce project 6"></div><div class="portfolio-meta"><span>Ecommerce</span><span>Analytics</span></div><h3>Commerce Insight Board</h3><p>Dashboard performa penjualan ecommerce dengan KPI produk dan campaign.</p></article>
-                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80" alt="Ecommerce project 7"></div><div class="portfolio-meta"><span>Ecommerce</span><span>Marketing</span></div><h3>Promo Engine Suite</h3><p>Panel promosi untuk voucher, bundling, flash sale, dan loyalty campaign.</p></article>
-                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1516382799247-87df95d790b7?auto=format&fit=crop&w=900&q=80" alt="Ecommerce project 8"></div><div class="portfolio-meta"><span>Ecommerce</span><span>Beauty</span></div><h3>GlowCart Beauty Shop</h3><p>Toko online produk beauty dengan review, membership, dan repeat-order flow.</p></article>
-                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1515169067868-5387ec356754?auto=format&fit=crop&w=900&q=80" alt="Ecommerce project 9"></div><div class="portfolio-meta"><span>Ecommerce</span><span>Food</span></div><h3>FreshBox Grocery App</h3><p>Ecommerce groceries dengan penjadwalan pengiriman dan kontrol stok realtime.</p></article>
-                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=900&q=80" alt="Ecommerce project 10"></div><div class="portfolio-meta"><span>Ecommerce</span><span>Marketplace</span></div><h3>Merchant One Portal</h3><p>Portal merchant untuk mengelola toko, katalog, pesanan, dan performa kampanye.</p></article>
+                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=900&q=80" alt="Nazar.id ecommerce project"></div><div class="portfolio-meta"><span>Ecommerce</span><span>Marketplace</span></div><h3>Nazar.id</h3><p>Ecommerce platform focused on digital ordering flow, catalog presentation, and transaction management.</p></article>
+                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=900&q=80" alt="Kapalapistore ecommerce project"></div><div class="portfolio-meta"><span>Ecommerce</span><span>Retail Brand</span></div><h3>Kapalapistore</h3><p>Brand commerce experience built to support product discovery, promotions, and direct online sales.</p></article>
+                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80" alt="Nike ecommerce project"></div><div class="portfolio-meta"><span>Ecommerce</span><span>Brand Store</span></div><h3>Nike</h3><p>Product-driven ecommerce presentation for premium catalog browsing and conversion-oriented shopping flow.</p></article>
+                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=80" alt="Eraspace ecommerce project"></div><div class="portfolio-meta"><span>Ecommerce</span><span>Omnichannel</span></div><h3>Eraspace</h3><p>Commerce ecosystem supporting product listing, digital checkout, and multi-category retail operations.</p></article>
+                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80" alt="Okebid ecommerce project"></div><div class="portfolio-meta"><span>Ecommerce</span><span>Auction</span></div><h3>Okebid</h3><p>Marketplace-oriented ecommerce initiative with bidding flow, listing control, and commercial transaction support.</p></article>
+                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1498049794561-7780e7231661?auto=format&fit=crop&w=900&q=80" alt="Muklay ecommerce project"></div><div class="portfolio-meta"><span>Ecommerce</span><span>Catalog</span></div><h3>Muklay</h3><p>Online commerce project designed for product catalog structure, order flow, and user-friendly digital browsing.</p></article>
+                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=900&q=80" alt="Blanja.com ecommerce project"></div><div class="portfolio-meta"><span>Ecommerce</span><span>Marketplace</span></div><h3>Blanja.com</h3><p>Large-scale marketplace experience focused on merchant operations, shopper journey, and commerce performance visibility.</p></article>
                         </div>
                     </div>
 
                     <div class="tab-panel" data-tab-panel="erp">
-                        <div class="tab-summary"><p>10 dummy project ERP untuk finance, HR, inventory, purchasing, dan operasional.</p><span>10 Project Dummy</span></div>
+                        <div class="tab-summary"><p>ERP, POS, MRP, and payment-related systems built for manufacturing, retail, and operational process control.</p><span>8 Projects</span></div>
                         <div class="portfolio-grid">
-                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=80" alt="ERP project 1"></div><div class="portfolio-meta"><span>ERP</span><span>Finance</span></div><h3>Finance Core ERP</h3><p>Modul finance untuk cashflow, jurnal, approval, dan monitoring anggaran.</p></article>
-                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=900&q=80" alt="ERP project 2"></div><div class="portfolio-meta"><span>ERP</span><span>HRIS</span></div><h3>People Flow HRIS</h3><p>Pengelolaan absensi, payroll, cuti, dan data karyawan dalam satu platform.</p></article>
-                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80" alt="ERP project 3"></div><div class="portfolio-meta"><span>ERP</span><span>Inventory</span></div><h3>Inventory Matrix</h3><p>Kontrol stok lintas gudang dengan alert minimum stock dan mutasi realtime.</p></article>
-                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=900&q=80" alt="ERP project 4"></div><div class="portfolio-meta"><span>ERP</span><span>Procurement</span></div><h3>Smart Procurement</h3><p>Alur purchasing digital dari request, approval, PO, sampai supplier evaluation.</p></article>
-                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80" alt="ERP project 5"></div><div class="portfolio-meta"><span>ERP</span><span>Manufacture</span></div><h3>Factory Operations Hub</h3><p>Modul produksi untuk planning, work order, dan efisiensi lini manufaktur.</p></article>
-                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=900&q=80" alt="ERP project 6"></div><div class="portfolio-meta"><span>ERP</span><span>CRM</span></div><h3>Client CRM Suite</h3><p>CRM terintegrasi dengan pipeline sales, follow-up, dan histori interaksi customer.</p></article>
-                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=900&q=80" alt="ERP project 7"></div><div class="portfolio-meta"><span>ERP</span><span>Project</span></div><h3>Project Delivery ERP</h3><p>Project management internal untuk timeline, resource allocation, dan costing.</p></article>
-                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=900&q=80" alt="ERP project 8"></div><div class="portfolio-meta"><span>ERP</span><span>Admin</span></div><h3>Backoffice Command</h3><p>Pusat operasional administrasi untuk dokumen, user role, dan approval process.</p></article>
-                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=80" alt="ERP project 9"></div><div class="portfolio-meta"><span>ERP</span><span>Executive</span></div><h3>Executive KPI Monitor</h3><p>Dashboard eksekutif yang menampilkan KPI bisnis utama secara ringkas dan cepat.</p></article>
-                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=900&q=80" alt="ERP project 10"></div><div class="portfolio-meta"><span>ERP</span><span>Integration</span></div><h3>ERP Integration Gateway</h3><p>Jembatan integrasi data antar sistem untuk operasional yang lebih sinkron.</p></article>
+                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=80" alt="MRP project for bakery factory"></div><div class="portfolio-meta"><span>ERP</span><span>MRP</span></div><h3>Bakery Factory MRP</h3><p>Material requirement planning system for bakery manufacturing workflows, stock readiness, and production coordination.</p></article>
+                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=900&q=80" alt="POS project for Stanli"></div><div class="portfolio-meta"><span>ERP</span><span>POS</span></div><h3>Stanli POS</h3><p>Point-of-sale solution built for bakery retail operations, transaction speed, and reporting visibility at Stanli.</p></article>
+                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80" alt="AA Textile ERP project"></div><div class="portfolio-meta"><span>ERP</span><span>Textile</span></div><h3>AA Textile ERP</h3><p>ERP implementation supporting textile production, stock flow, purchasing, and operational control for AA Textile.</p></article>
+                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=900&q=80" alt="Gemah textile ERP project"></div><div class="portfolio-meta"><span>ERP</span><span>Textile</span></div><h3>Gemah Textile ERP</h3><p>Manufacturing-oriented ERP platform designed to manage textile operations, internal process tracking, and business efficiency.</p></article>
+                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80" alt="Jaya Abadi textile ERP project"></div><div class="portfolio-meta"><span>ERP</span><span>Textile</span></div><h3>Jaya Abadi Textile ERP</h3><p>Enterprise workflow system supporting textile production structure, inventory coordination, and operational reporting.</p></article>
+                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=900&q=80" alt="Sukses Jaya textile ERP project"></div><div class="portfolio-meta"><span>ERP</span><span>Textile</span></div><h3>Sukses Jaya Textile ERP</h3><p>ERP solution for textile business flow, production visibility, and department-level process integration.</p></article>
+                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=900&q=80" alt="Fantastic POS project"></div><div class="portfolio-meta"><span>ERP</span><span>POS</span></div><h3>Fantastic POS</h3><p>Operational POS platform for transaction handling, outlet activity, and sales reporting in retail environments.</p></article>
+                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=900&q=80" alt="EDC system project"></div><div class="portfolio-meta"><span>ERP</span><span>Payment System</span></div><h3>EDC System</h3><p>Electronic data capture system project supporting payment device operations, transaction flow, and implementation control.</p></article>
                         </div>
                     </div>
 
                     <div class="tab-panel" data-tab-panel="crypto">
-                        <div class="tab-summary"><p>10 dummy project chripto untuk dashboard aset, trading monitor, wallet, dan analytic tools.</p><span>10 Project Dummy</span></div>
+                        <div class="tab-summary"><p>Digital payment and crypto-related initiatives focused on transaction experience, wallet flow, and fintech service direction.</p><span>2 Projects</span></div>
                         <div class="portfolio-grid">
-                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1621761191319-c6fb62004040?auto=format&fit=crop&w=900&q=80" alt="Crypto project 1"></div><div class="portfolio-meta"><span>Chripto</span><span>Wallet</span></div><h3>CoinVault Wallet UI</h3><p>Antarmuka wallet modern untuk melihat saldo, transaksi, dan portofolio aset digital.</p></article>
-                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1640161704729-cbe966a08476?auto=format&fit=crop&w=900&q=80" alt="Crypto project 2"></div><div class="portfolio-meta"><span>Chripto</span><span>Trading</span></div><h3>TradePulse Station</h3><p>Panel trading monitor dengan watchlist, market depth, dan alert pergerakan harga.</p></article>
-                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=900&q=80" alt="Crypto project 3"></div><div class="portfolio-meta"><span>Chripto</span><span>NFT</span></div><h3>NFT Gallery Board</h3><p>Showcase NFT collection dengan rarity info dan activity stream yang menarik.</p></article>
-                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1642052502120-19e2ddf25a90?auto=format&fit=crop&w=900&q=80" alt="Crypto project 4"></div><div class="portfolio-meta"><span>Chripto</span><span>Analytics</span></div><h3>Chain Metrics Lab</h3><p>Dashboard analytics untuk volume, holder growth, dan performa token secara realtime.</p></article>
-                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1621504450181-5d356f61d307?auto=format&fit=crop&w=900&q=80" alt="Crypto project 5"></div><div class="portfolio-meta"><span>Chripto</span><span>Staking</span></div><h3>StakeFlow Portal</h3><p>Platform staking sederhana untuk reward tracking dan kalkulasi estimasi hasil.</p></article>
-                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1622630998477-20aa696ecb05?auto=format&fit=crop&w=900&q=80" alt="Crypto project 6"></div><div class="portfolio-meta"><span>Chripto</span><span>Exchange</span></div><h3>Exchange Admin Hub</h3><p>Panel admin exchange untuk user activity, liquidity watch, dan issue monitoring.</p></article>
-                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1639322537228-f710d846310a?auto=format&fit=crop&w=900&q=80" alt="Crypto project 7"></div><div class="portfolio-meta"><span>Chripto</span><span>Research</span></div><h3>Token Research Desk</h3><p>Workspace riset token dengan scorecard fundamental dan technical summary.</p></article>
-                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1639762681057-408e52192e55?auto=format&fit=crop&w=900&q=80" alt="Crypto project 8"></div><div class="portfolio-meta"><span>Chripto</span><span>DeFi</span></div><h3>DeFi Position Tracker</h3><p>Pelacak posisi DeFi untuk liquidity pool, farming reward, dan risk exposure.</p></article>
-                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1642104704074-907c0698cbd9?auto=format&fit=crop&w=900&q=80" alt="Crypto project 9"></div><div class="portfolio-meta"><span>Chripto</span><span>Security</span></div><h3>Wallet Risk Scanner</h3><p>Monitoring transaksi wallet dan deteksi awal aktivitas yang berisiko tinggi.</p></article>
-                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1644361566696-3d7a5b5ed6c1?auto=format&fit=crop&w=900&q=80" alt="Crypto project 10"></div><div class="portfolio-meta"><span>Chripto</span><span>Mobile</span></div><h3>Crypto Mobile Insight</h3><p>Ringkasan portofolio chripto mobile dengan grafik aset dan notifikasi pintar.</p></article>
+                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1621761191319-c6fb62004040?auto=format&fit=crop&w=900&q=80" alt="Pokepay crypto project"></div><div class="portfolio-meta"><span>Chripto</span><span>Payment</span></div><h3>Pokepay</h3><p>Crypto and digital payment product concept built around transaction flow, wallet interaction, and service usability.</p></article>
+                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1640161704729-cbe966a08476?auto=format&fit=crop&w=900&q=80" alt="ComeComePay crypto project"></div><div class="portfolio-meta"><span>Chripto</span><span>Fintech</span></div><h3>ComeComePay</h3><p>Payment-oriented digital platform with a crypto-adjacent service direction and transaction experience focus.</p></article>
                         </div>
                     </div>
 
                     <div class="tab-panel" data-tab-panel="devops">
-                        <div class="tab-summary"><p>10 dummy project Dev Ops untuk observability, CI/CD, infrastructure, dan deployment automation.</p><span>10 Project Dummy</span></div>
+                        <div class="tab-summary"><p>Operational systems supported by infrastructure, deployment, and service continuity practices for workforce and HR processes.</p><span>2 Projects</span></div>
                         <div class="portfolio-grid">
-                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1516321165247-4aa89a48be28?auto=format&fit=crop&w=900&q=80" alt="DevOps project 1"></div><div class="portfolio-meta"><span>Dev Ops</span><span>CI/CD</span></div><h3>Pipeline Automation Pro</h3><p>Setup pipeline CI/CD untuk build, test, deploy, dan release monitoring otomatis.</p></article>
-                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80" alt="DevOps project 2"></div><div class="portfolio-meta"><span>Dev Ops</span><span>Cloud</span></div><h3>Cloud Infra Control</h3><p>Dashboard infrastruktur cloud untuk memantau service health dan resource cost.</p></article>
-                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=900&q=80" alt="DevOps project 3"></div><div class="portfolio-meta"><span>Dev Ops</span><span>Monitoring</span></div><h3>Service Watchtower</h3><p>Sistem observability dengan alert uptime, error logs, dan latency analysis.</p></article>
-                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=900&q=80" alt="DevOps project 4"></div><div class="portfolio-meta"><span>Dev Ops</span><span>Deploy</span></div><h3>Release Manager Board</h3><p>Kontrol deployment multi-environment untuk staging, production, dan rollback.</p></article>
-                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=900&q=80" alt="DevOps project 5"></div><div class="portfolio-meta"><span>Dev Ops</span><span>Container</span></div><h3>Container Ops Center</h3><p>Pengelolaan container dan cluster dengan insight performa serta autoscaling.</p></article>
-                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=900&q=80" alt="DevOps project 6"></div><div class="portfolio-meta"><span>Dev Ops</span><span>Logs</span></div><h3>Central Log Stream</h3><p>Pengumpulan log terpusat untuk debugging cepat dan analisis insiden aplikasi.</p></article>
-                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1504639725590-34d0984388bd?auto=format&fit=crop&w=900&q=80" alt="DevOps project 7"></div><div class="portfolio-meta"><span>Dev Ops</span><span>Security</span></div><h3>Security Patch Tracker</h3><p>Monitoring patch security, vulnerability status, dan tindakan mitigasi service.</p></article>
-                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=900&q=80" alt="DevOps project 8"></div><div class="portfolio-meta"><span>Dev Ops</span><span>Automation</span></div><h3>Infra Script Library</h3><p>Koleksi automation script untuk provisioning, maintenance, dan backup rutin.</p></article>
-                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80" alt="DevOps project 9"></div><div class="portfolio-meta"><span>Dev Ops</span><span>Team Ops</span></div><h3>Team Delivery Metrics</h3><p>Panel metrik delivery engineering untuk lead time, release frequency, dan failure rate.</p></article>
-                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=900&q=80" alt="DevOps project 10"></div><div class="portfolio-meta"><span>Dev Ops</span><span>Backup</span></div><h3>Disaster Recovery Desk</h3><p>Rancangan dashboard backup dan recovery untuk menjaga continuity sistem bisnis.</p></article>
+                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1516321165247-4aa89a48be28?auto=format&fit=crop&w=900&q=80" alt="Textile attendance devops project"></div><div class="portfolio-meta"><span>Dev Ops</span><span>Attendance</span></div><h3>Textile Attendance</h3><p>Attendance platform operations supported by deployment setup, uptime handling, and workforce system reliability.</p></article>
+                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80" alt="Fantastic HRIS devops project"></div><div class="portfolio-meta"><span>Dev Ops</span><span>HRIS</span></div><h3>Fantastic HRIS</h3><p>HRIS operational platform with infrastructure support, release handling, and service continuity for internal workforce processes.</p></article>
                         </div>
                     </div>
 
                     <div class="tab-panel" data-tab-panel="business-analysis">
-                        <div class="tab-summary"><p>10 dummy project bisnis &amp; system analisis untuk requirement mapping, process design, dan KPI.</p><span>10 Project Dummy</span></div>
+                        <div class="tab-summary"><p>Audit and system analysis work focused on business visibility, process evaluation, and architecture improvement direction.</p><span>2 Projects</span></div>
                         <div class="portfolio-grid">
-                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=900&q=80" alt="Business analysis project 1"></div><div class="portfolio-meta"><span>Analysis</span><span>KPI</span></div><h3>Executive KPI Blueprint</h3><p>Perancangan KPI dashboard untuk manajemen dengan fokus insight yang actionable.</p></article>
-                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80" alt="Business analysis project 2"></div><div class="portfolio-meta"><span>Analysis</span><span>Workflow</span></div><h3>Workflow Mapping Suite</h3><p>Dokumentasi alur bisnis dan redesign proses untuk meningkatkan efisiensi kerja.</p></article>
-                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=900&q=80" alt="Business analysis project 3"></div><div class="portfolio-meta"><span>Analysis</span><span>Requirement</span></div><h3>Requirement Discovery Lab</h3><p>Workshop kebutuhan sistem dengan output scope, pain point, dan prioritas fitur.</p></article>
-                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=900&q=80" alt="Business analysis project 4"></div><div class="portfolio-meta"><span>Analysis</span><span>UX Flow</span></div><h3>User Flow Audit</h3><p>Analisis user journey agar sistem lebih mudah dipakai dan mengurangi friction.</p></article>
-                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80" alt="Business analysis project 5"></div><div class="portfolio-meta"><span>Analysis</span><span>ERP Scope</span></div><h3>ERP Scope Planner</h3><p>Pemetaan modul ERP yang relevan berdasarkan struktur proses dan kebutuhan divisi.</p></article>
-                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80" alt="Business analysis project 6"></div><div class="portfolio-meta"><span>Analysis</span><span>BI</span></div><h3>Business Insight Framework</h3><p>Framework pelaporan bisnis untuk membantu manajemen membaca performa lebih cepat.</p></article>
-                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=80" alt="Business analysis project 7"></div><div class="portfolio-meta"><span>Analysis</span><span>System</span></div><h3>System Audit Matrix</h3><p>Audit sistem lama untuk melihat bottleneck, technical debt, dan arah pengembangan.</p></article>
-                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=900&q=80" alt="Business analysis project 8"></div><div class="portfolio-meta"><span>Analysis</span><span>Roadmap</span></div><h3>Digital Roadmap Plan</h3><p>Peta jalan transformasi digital bertahap agar investasi sistem lebih terarah.</p></article>
-                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=900&q=80" alt="Business analysis project 9"></div><div class="portfolio-meta"><span>Analysis</span><span>Operations</span></div><h3>Operational Gap Review</h3><p>Review proses operasional untuk menentukan prioritas automasi dan integrasi sistem.</p></article>
-                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=900&q=80" alt="Business analysis project 10"></div><div class="portfolio-meta"><span>Analysis</span><span>Docs</span></div><h3>Specification Documentation</h3><p>Dokumentasi kebutuhan sistem, user story, dan acceptance criteria yang lebih jelas.</p></article>
+                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=900&q=80" alt="Dashboard toll audit project"></div><div class="portfolio-meta"><span>Analysis</span><span>Audit</span></div><h3>Dashboard Toll System Audit</h3><p>System audit initiative for toll dashboard visibility, reporting quality, and architecture review for decision support.</p></article>
+                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=80" alt="ERP audit project"></div><div class="portfolio-meta"><span>Analysis</span><span>ERP Audit</span></div><h3>ERP System Audit</h3><p>Business and system analysis work focused on ERP structure, process gaps, and improvement direction across enterprise workflows.</p></article>
                         </div>
                     </div>
                 </div>
@@ -1875,77 +1902,84 @@
                 <div class="section-heading reveal">
                     <span class="eyebrow">Video Showcase</span>
                     <h2>YouTube Videos</h2>
-                    <p>A collection of 10 YouTube video cards to showcase educational content, product demos, and digital presentation materials in a clean visual layout.</p>
+                    <p>A curated collection of 11 and more YouTube videos covering Metabase, Golang, Docker, Odoo, Android, and attendance solution setup tutorials.</p>
                 </div>
                 <div class="video-grid">
                     <article class="video-card glass-card reveal">
-                        <div class="video-frame"><button class="video-trigger" type="button" data-video-id="M7lc1UVf-VE" data-video-title="Demo Dashboard ERP Modern" aria-label="Play Demo Dashboard ERP Modern video"><img src="https://i.ytimg.com/vi/M7lc1UVf-VE/hqdefault.jpg" alt="Thumbnail Demo Dashboard ERP Modern"><span class="video-tag">YouTube</span><span class="video-play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 6.82v10.36c0 .79.87 1.27 1.54.84l8.14-5.18a1 1 0 0 0 0-1.68L9.54 5.98A1 1 0 0 0 8 6.82Z"></path></svg><span>Play Video</span></span></button></div>
+                        <div class="video-frame"><button class="video-trigger" type="button" data-video-id="2bz1I0EUs9A" data-video-title="Tutorial Metabase dari Nol 🚀 | Basic Install &amp; Setup Data Analytics" aria-label="Play Tutorial Metabase dari Nol video"><img src="https://i.ytimg.com/vi/2bz1I0EUs9A/hqdefault.jpg" alt="Thumbnail Tutorial Metabase dari Nol"><span class="video-tag">YouTube</span><span class="video-play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 6.82v10.36c0 .79.87 1.27 1.54.84l8.14-5.18a1 1 0 0 0 0-1.68L9.54 5.98A1 1 0 0 0 8 6.82Z"></path></svg><span>Play Video</span></span></button></div>
                         <div>
-                            <h3>Demo Dashboard ERP Modern</h3>
-                            <p>A preview of an operational dashboard focused on data clarity, approvals, and real-time monitoring.</p>
+                            <h3>Tutorial Metabase dari Nol 🚀 | Basic Install &amp; Setup Data Analytics</h3>
+                            <p>Step-by-step introduction to installing Metabase and preparing a clean starting point for data analytics dashboards.</p>
                         </div>
                     </article>
                     <article class="video-card glass-card reveal">
-                        <div class="video-frame"><button class="video-trigger" type="button" data-video-id="ysz5S6PUM-U" data-video-title="Presentasi Website Company Profile" aria-label="Play Presentasi Website Company Profile video"><img src="https://i.ytimg.com/vi/ysz5S6PUM-U/hqdefault.jpg" alt="Thumbnail Presentasi Website Company Profile"><span class="video-tag">YouTube</span><span class="video-play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 6.82v10.36c0 .79.87 1.27 1.54.84l8.14-5.18a1 1 0 0 0 0-1.68L9.54 5.98A1 1 0 0 0 8 6.82Z"></path></svg><span>Play Video</span></span></button></div>
+                        <div class="video-frame"><button class="video-trigger" type="button" data-video-id="4vrZqJNMLnY" data-video-title="Tutorial CRUD Golang + MongoDB dengan Arsitektur MVC | Pemula Wajib Nonton!" aria-label="Play Tutorial CRUD Golang dan MongoDB video"><img src="https://i.ytimg.com/vi/4vrZqJNMLnY/hqdefault.jpg" alt="Thumbnail Tutorial CRUD Golang dan MongoDB"><span class="video-tag">YouTube</span><span class="video-play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 6.82v10.36c0 .79.87 1.27 1.54.84l8.14-5.18a1 1 0 0 0 0-1.68L9.54 5.98A1 1 0 0 0 8 6.82Z"></path></svg><span>Play Video</span></span></button></div>
                         <div>
-                            <h3>Presentasi Website Company Profile</h3>
-                            <p>An example presentation video for a premium landing page with strong visual direction and clear navigation.</p>
+                            <h3>Tutorial CRUD Golang + MongoDB dengan Arsitektur MVC | Pemula Wajib Nonton!</h3>
+                            <p>Hands-on Golang and MongoDB CRUD tutorial using MVC structure to help beginners understand clean project organization.</p>
                         </div>
                     </article>
                     <article class="video-card glass-card reveal">
-                        <div class="video-frame"><button class="video-trigger" type="button" data-video-id="aqz-KE-bpKQ" data-video-title="Workflow Automation Overview" aria-label="Putar video Workflow Automation Overview"><img src="https://i.ytimg.com/vi/aqz-KE-bpKQ/hqdefault.jpg" alt="Thumbnail Workflow Automation Overview"><span class="video-tag">YouTube</span><span class="video-play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 6.82v10.36c0 .79.87 1.27 1.54.84l8.14-5.18a1 1 0 0 0 0-1.68L9.54 5.98A1 1 0 0 0 8 6.82Z"></path></svg><span>Play Video</span></span></button></div>
+                        <div class="video-frame"><button class="video-trigger" type="button" data-video-id="nR-kYH37qLE" data-video-title="Setup &amp; Configuration Golang dengan Docker Compose — 1x Run Langsung Jadi Project!" aria-label="Play Setup dan Configuration Golang dengan Docker Compose video"><img src="https://i.ytimg.com/vi/nR-kYH37qLE/hqdefault.jpg" alt="Thumbnail Setup dan Configuration Golang dengan Docker Compose"><span class="video-tag">YouTube</span><span class="video-play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 6.82v10.36c0 .79.87 1.27 1.54.84l8.14-5.18a1 1 0 0 0 0-1.68L9.54 5.98A1 1 0 0 0 8 6.82Z"></path></svg><span>Play Video</span></span></button></div>
                         <div>
-                            <h3>Workflow Automation Overview</h3>
-                            <p>Video dummy untuk menampilkan alur otomasi kerja dari request masuk sampai approval akhir.</p>
+                            <h3>Setup &amp; Configuration Golang dengan Docker Compose — 1x Run Langsung Jadi Project!</h3>
+                            <p>Practical tutorial for preparing a reusable Golang project environment with Docker Compose in a single run.</p>
                         </div>
                     </article>
                     <article class="video-card glass-card reveal">
-                        <div class="video-frame"><button class="video-trigger" type="button" data-video-id="ScMzIvxBSi4" data-video-title="UI Dashboard Analytics" aria-label="Putar video UI Dashboard Analytics"><img src="https://i.ytimg.com/vi/ScMzIvxBSi4/hqdefault.jpg" alt="Thumbnail UI Dashboard Analytics"><span class="video-tag">YouTube</span><span class="video-play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 6.82v10.36c0 .79.87 1.27 1.54.84l8.14-5.18a1 1 0 0 0 0-1.68L9.54 5.98A1 1 0 0 0 8 6.82Z"></path></svg><span>Play Video</span></span></button></div>
+                        <div class="video-frame"><button class="video-trigger" type="button" data-video-id="_1TY0cU_SpM" data-video-title="Setup &amp; Configuration Odoo17 Dengan Docker, 1x Run || Auto Deploy &amp; Siap Pakai" aria-label="Play Setup dan Configuration Odoo17 Dengan Docker video"><img src="https://i.ytimg.com/vi/_1TY0cU_SpM/hqdefault.jpg" alt="Thumbnail Setup dan Configuration Odoo17 Dengan Docker"><span class="video-tag">YouTube</span><span class="video-play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 6.82v10.36c0 .79.87 1.27 1.54.84l8.14-5.18a1 1 0 0 0 0-1.68L9.54 5.98A1 1 0 0 0 8 6.82Z"></path></svg><span>Play Video</span></span></button></div>
                         <div>
-                            <h3>UI Dashboard Analytics</h3>
-                            <p>Showcase card video untuk kebutuhan portfolio analytics, KPI, dan executive reporting.</p>
+                            <h3>Setup &amp; Configuration Odoo17 Dengan Docker, 1x Run || Auto Deploy &amp; Siap Pakai</h3>
+                            <p>Deployment-focused guide for running Odoo 17 with Docker so the environment is ready quickly and consistently.</p>
                         </div>
                     </article>
                     <article class="video-card glass-card reveal">
-                        <div class="video-frame"><button class="video-trigger" type="button" data-video-id="jNQXAC9IVRw" data-video-title="Product Walkthrough Ecommerce" aria-label="Putar video Product Walkthrough Ecommerce"><img src="https://i.ytimg.com/vi/jNQXAC9IVRw/hqdefault.jpg" alt="Thumbnail Product Walkthrough Ecommerce"><span class="video-tag">YouTube</span><span class="video-play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 6.82v10.36c0 .79.87 1.27 1.54.84l8.14-5.18a1 1 0 0 0 0-1.68L9.54 5.98A1 1 0 0 0 8 6.82Z"></path></svg><span>Play Video</span></span></button></div>
+                        <div class="video-frame"><button class="video-trigger" type="button" data-video-id="HK-fI4inxoI" data-video-title="Android Tutorial ~ Dialog Calendar" aria-label="Play Android Tutorial Dialog Calendar video"><img src="https://i.ytimg.com/vi/HK-fI4inxoI/hqdefault.jpg" alt="Thumbnail Android Tutorial Dialog Calendar"><span class="video-tag">YouTube</span><span class="video-play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 6.82v10.36c0 .79.87 1.27 1.54.84l8.14-5.18a1 1 0 0 0 0-1.68L9.54 5.98A1 1 0 0 0 8 6.82Z"></path></svg><span>Play Video</span></span></button></div>
                         <div>
-                            <h3>Product Walkthrough Ecommerce</h3>
-                            <p>Card video untuk demo katalog, cart, checkout, dan promosi pada platform ecommerce.</p>
+                            <h3>Android Tutorial ~ Dialog Calendar</h3>
+                            <p>Android development tutorial focused on implementing a calendar dialog for date selection in mobile applications.</p>
                         </div>
                     </article>
                     <article class="video-card glass-card reveal">
-                        <div class="video-frame"><button class="video-trigger" type="button" data-video-id="e-ORhEE9VVg" data-video-title="Brand Campaign Motion" aria-label="Putar video Brand Campaign Motion"><img src="https://i.ytimg.com/vi/e-ORhEE9VVg/hqdefault.jpg" alt="Thumbnail Brand Campaign Motion"><span class="video-tag">YouTube</span><span class="video-play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 6.82v10.36c0 .79.87 1.27 1.54.84l8.14-5.18a1 1 0 0 0 0-1.68L9.54 5.98A1 1 0 0 0 8 6.82Z"></path></svg><span>Play Video</span></span></button></div>
+                        <div class="video-frame"><button class="video-trigger" type="button" data-video-id="DV4vvbJmlBQ" data-video-title="Android Tutorial ~ ArrayList LinkedList" aria-label="Play Android Tutorial ArrayList LinkedList video"><img src="https://i.ytimg.com/vi/DV4vvbJmlBQ/hqdefault.jpg" alt="Thumbnail Android Tutorial ArrayList LinkedList"><span class="video-tag">YouTube</span><span class="video-play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 6.82v10.36c0 .79.87 1.27 1.54.84l8.14-5.18a1 1 0 0 0 0-1.68L9.54 5.98A1 1 0 0 0 8 6.82Z"></path></svg><span>Play Video</span></span></button></div>
                         <div>
-                            <h3>Brand Campaign Motion</h3>
-                            <p>Contoh tampilan video campaign digital untuk kebutuhan promosi brand dan awareness.</p>
+                            <h3>Android Tutorial ~ ArrayList LinkedList</h3>
+                            <p>Basic Android programming lesson explaining data structure usage with ArrayList and LinkedList in app development.</p>
                         </div>
                     </article>
                     <article class="video-card glass-card reveal">
-                        <div class="video-frame"><button class="video-trigger" type="button" data-video-id="LXb3EKWsInQ" data-video-title="DevOps Monitoring Session" aria-label="Putar video DevOps Monitoring Session"><img src="https://i.ytimg.com/vi/LXb3EKWsInQ/hqdefault.jpg" alt="Thumbnail DevOps Monitoring Session"><span class="video-tag">YouTube</span><span class="video-play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 6.82v10.36c0 .79.87 1.27 1.54.84l8.14-5.18a1 1 0 0 0 0-1.68L9.54 5.98A1 1 0 0 0 8 6.82Z"></path></svg><span>Play Video</span></span></button></div>
+                        <div class="video-frame"><button class="video-trigger" type="button" data-video-id="OKmoHrY_Cfw" data-video-title="Android Tutorial ~ Tutorial Toolbar" aria-label="Play Android Tutorial Toolbar video"><img src="https://i.ytimg.com/vi/OKmoHrY_Cfw/hqdefault.jpg" alt="Thumbnail Android Tutorial Toolbar"><span class="video-tag">YouTube</span><span class="video-play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 6.82v10.36c0 .79.87 1.27 1.54.84l8.14-5.18a1 1 0 0 0 0-1.68L9.54 5.98A1 1 0 0 0 8 6.82Z"></path></svg><span>Play Video</span></span></button></div>
                         <div>
-                            <h3>DevOps Monitoring Session</h3>
-                            <p>Video dummy untuk memvisualkan observability, logs, alerting, dan performa service.</p>
+                            <h3>Android Tutorial ~ Tutorial Toolbar</h3>
+                            <p>Practical Android UI walkthrough showing toolbar setup and integration for a cleaner mobile app experience.</p>
                         </div>
                     </article>
                     <article class="video-card glass-card reveal">
-                        <div class="video-frame"><button class="video-trigger" type="button" data-video-id="2Vv-BfVoq4g" data-video-title="Mobile App Feature Showcase" aria-label="Putar video Mobile App Feature Showcase"><img src="https://i.ytimg.com/vi/2Vv-BfVoq4g/hqdefault.jpg" alt="Thumbnail Mobile App Feature Showcase"><span class="video-tag">YouTube</span><span class="video-play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 6.82v10.36c0 .79.87 1.27 1.54.84l8.14-5.18a1 1 0 0 0 0-1.68L9.54 5.98A1 1 0 0 0 8 6.82Z"></path></svg><span>Play Video</span></span></button></div>
+                        <div class="video-frame"><button class="video-trigger" type="button" data-video-id="g8G4SDnvVEg" data-video-title="Cara Setting Mesin di Aplikasi Attendance Solution P208, X105/X106 &amp; Face Series | Mudah!" aria-label="Play Cara Setting Mesin di Aplikasi Attendance Solution video"><img src="https://i.ytimg.com/vi/g8G4SDnvVEg/hqdefault.jpg" alt="Thumbnail Cara Setting Mesin di Aplikasi Attendance Solution"><span class="video-tag">YouTube</span><span class="video-play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 6.82v10.36c0 .79.87 1.27 1.54.84l8.14-5.18a1 1 0 0 0 0-1.68L9.54 5.98A1 1 0 0 0 8 6.82Z"></path></svg><span>Play Video</span></span></button></div>
                         <div>
-                            <h3>Mobile App Feature Showcase</h3>
-                            <p>Card video untuk demo onboarding, notifikasi, dan fitur inti aplikasi mobile bisnis.</p>
+                            <h3>Cara Setting Mesin di Aplikasi Attendance Solution P208, X105/X106 &amp; Face Series | Mudah!</h3>
+                            <p>Tutorial for configuring attendance devices in the Solution app across P208, X105/X106, and Face Series machines.</p>
                         </div>
                     </article>
                     <article class="video-card glass-card reveal">
-                        <div class="video-frame"><button class="video-trigger" type="button" data-video-id="kXYiU_JCYtU" data-video-title="Business System Presentation" aria-label="Putar video Business System Presentation"><img src="https://i.ytimg.com/vi/kXYiU_JCYtU/hqdefault.jpg" alt="Thumbnail Business System Presentation"><span class="video-tag">YouTube</span><span class="video-play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 6.82v10.36c0 .79.87 1.27 1.54.84l8.14-5.18a1 1 0 0 0 0-1.68L9.54 5.98A1 1 0 0 0 8 6.82Z"></path></svg><span>Play Video</span></span></button></div>
+                        <div class="video-frame"><button class="video-trigger" type="button" data-video-id="02Ik1l2ulzI" data-video-title="Cara Setting Data di Aplikasi Attendance Solution P208, X105/X106 &amp; Face Series | Lengkap &amp; Mudah!" aria-label="Play Cara Setting Data di Aplikasi Attendance Solution video"><img src="https://i.ytimg.com/vi/02Ik1l2ulzI/hqdefault.jpg" alt="Thumbnail Cara Setting Data di Aplikasi Attendance Solution"><span class="video-tag">YouTube</span><span class="video-play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 6.82v10.36c0 .79.87 1.27 1.54.84l8.14-5.18a1 1 0 0 0 0-1.68L9.54 5.98A1 1 0 0 0 8 6.82Z"></path></svg><span>Play Video</span></span></button></div>
                         <div>
-                            <h3>Business System Presentation</h3>
-                            <p>Video presentasi untuk menjelaskan pain point, solusi sistem, dan manfaat implementasi.</p>
+                            <h3>Cara Setting Data di Aplikasi Attendance Solution P208, X105/X106 &amp; Face Series | Lengkap &amp; Mudah!</h3>
+                            <p>Complete guide for managing attendance data setup, synchronization, and basic configuration in the Solution application.</p>
                         </div>
                     </article>
                     <article class="video-card glass-card reveal">
-                        <div class="video-frame"><button class="video-trigger" type="button" data-video-id="fLexgOxsZu0" data-video-title="Premium Portfolio Showcase" aria-label="Putar video Premium Portfolio Showcase"><img src="https://i.ytimg.com/vi/fLexgOxsZu0/hqdefault.jpg" alt="Thumbnail Premium Portfolio Showcase"><span class="video-tag">YouTube</span><span class="video-play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 6.82v10.36c0 .79.87 1.27 1.54.84l8.14-5.18a1 1 0 0 0 0-1.68L9.54 5.98A1 1 0 0 0 8 6.82Z"></path></svg><span>Play Video</span></span></button></div>
+                        <div class="video-frame"><button class="video-trigger" type="button" data-video-id="1HdQ4q0VaEY" data-video-title="Cara Setting Departement di Mesin Absensi Solution P208, X105/X106 &amp; Face Series | Mudah!" aria-label="Play Cara Setting Departement di Mesin Absensi video"><img src="https://i.ytimg.com/vi/1HdQ4q0VaEY/hqdefault.jpg" alt="Thumbnail Cara Setting Departement di Mesin Absensi"><span class="video-tag">YouTube</span><span class="video-play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 6.82v10.36c0 .79.87 1.27 1.54.84l8.14-5.18a1 1 0 0 0 0-1.68L9.54 5.98A1 1 0 0 0 8 6.82Z"></path></svg><span>Play Video</span></span></button></div>
                         <div>
-                            <h3>Premium Portfolio Showcase</h3>
-                            <p>Contoh penutup section video untuk menampilkan hasil akhir portfolio visual yang lebih hidup.</p>
+                            <h3>Cara Setting Departement di Mesin Absensi Solution P208, X105/X106 &amp; Face Series | Mudah!</h3>
+                            <p>Focused walkthrough for setting department structures on Solution attendance machines and related device series.</p>
+                        </div>
+                    </article>
+                    <article class="video-card glass-card reveal">
+                        <div class="video-frame"><button class="video-trigger" type="button" data-video-id="Ps-iLRMG4hY" data-video-title="Tutorial Setting Shift di Mesin Fingerprint Solution P208, X105/X106 &amp; Face Series (Lengkap &amp; Mudah)" aria-label="Play Tutorial Setting Shift di Mesin Fingerprint Solution video"><img src="https://i.ytimg.com/vi/Ps-iLRMG4hY/hqdefault.jpg" alt="Thumbnail Tutorial Setting Shift di Mesin Fingerprint Solution"><span class="video-tag">YouTube</span><span class="video-play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 6.82v10.36c0 .79.87 1.27 1.54.84l8.14-5.18a1 1 0 0 0 0-1.68L9.54 5.98A1 1 0 0 0 8 6.82Z"></path></svg><span>Play Video</span></span></button></div>
+                        <div>
+                            <h3>Tutorial Setting Shift di Mesin Fingerprint Solution P208, X105/X106 &amp; Face Series (Lengkap &amp; Mudah)</h3>
+                            <p>End-to-end tutorial for defining shift schedules on fingerprint and face attendance devices in the Solution ecosystem.</p>
                         </div>
                     </article>
                 </div>
@@ -2011,34 +2045,42 @@
                         <span>Post-launch support</span>
                     </div>
                     <div class="contact-direct-grid">
-                        <a class="contact-direct-link" href="mailto:hello@tatangrw.dev" aria-label="Email Tatang">
-                            <div><span>Email</span><strong>hello@tatangrw.dev</strong></div>
+                        <a class="contact-direct-link" href="mailto:devgandawijaya@gmail.com" aria-label="Email Tatang">
+                            <div><span>Email</span><strong>devgandawijaya@gmail.com</strong></div>
                             <div class="contact-direct-icon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 5.75A2.75 2.75 0 0 1 5.75 3h12.5A2.75 2.75 0 0 1 21 5.75v12.5A2.75 2.75 0 0 1 18.25 21H5.75A2.75 2.75 0 0 1 3 18.25V5.75Zm2.12.28 6.47 5.18a.66.66 0 0 0 .82 0l6.47-5.18a1 1 0 0 0-.63-.28H5.75c-.23 0-.45.1-.63.28Zm14.13 1.5-5.96 4.77a2.41 2.41 0 0 1-2.98 0L4.75 7.53v10.72c0 .55.45 1 1 1h12.5c.55 0 1-.45 1-1V7.53Z"></path></svg></div>
                         </a>
-                        <a class="contact-direct-link" href="https://wa.me/6281234567890" target="_blank" rel="noreferrer" aria-label="WhatsApp Tatang">
-                            <div><span>WhatsApp</span><strong>+62 812-3456-7890</strong></div>
+                        <a class="contact-direct-link" href="https://wa.me/6282218866002" target="_blank" rel="noreferrer" aria-label="WhatsApp Tatang">
+                            <div><span>WhatsApp</span><strong>0822-1886-6002</strong></div>
                             <div class="contact-direct-icon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.5 2 2 6.42 2 11.88c0 1.74.47 3.44 1.36 4.93L2 22l5.4-1.41a10.17 10.17 0 0 0 4.64 1.11h.01c5.54 0 10.04-4.42 10.04-9.88C22.09 6.42 17.58 2 12.04 2Zm.01 17.97a8.5 8.5 0 0 1-4.33-1.18l-.31-.18-3.2.84.85-3.11-.2-.32a8.1 8.1 0 0 1-1.28-4.2c0-4.49 3.79-8.14 8.45-8.14 2.26 0 4.38.87 5.97 2.45a8 8 0 0 1 2.48 5.69c0 4.49-3.79 8.15-8.43 8.15Zm4.63-6.08c-.25-.12-1.46-.71-1.68-.79-.22-.08-.38-.12-.54.12-.16.24-.62.79-.76.95-.14.16-.28.18-.53.06-.25-.12-1.05-.38-2-1.21-.74-.64-1.24-1.43-1.39-1.67-.14-.24-.01-.37.11-.49.11-.11.25-.28.37-.42.12-.14.16-.24.25-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.29-.74-1.76-.2-.48-.4-.41-.54-.41h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2 0 1.18.86 2.31.98 2.47.12.16 1.68 2.65 4.16 3.61 2.47.96 2.47.64 2.91.6.44-.04 1.46-.58 1.66-1.14.2-.56.2-1.05.14-1.14-.06-.1-.23-.16-.48-.28Z"></path></svg></div>
                         </a>
-                        <a class="contact-direct-link" href="https://linkedin.com/in/tatangrw" target="_blank" rel="noreferrer" aria-label="LinkedIn Tatang">
-                            <div><span>LinkedIn</span><strong>linkedin.com/in/tatangrw</strong></div>
+                        <a class="contact-direct-link" href="https://www.linkedin.com/in/tatang-roswandi-ganda-wijaya-b0851725b/" target="_blank" rel="noreferrer" aria-label="LinkedIn Tatang">
+                            <div><span>LinkedIn</span><strong>linkedin.com/in/tatang-roswandi-ganda-wijaya-b0851725b</strong></div>
                             <div class="contact-direct-icon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.94 8.5H3.56V20h3.38V8.5Zm.22-3.55C7.16 3.87 6.34 3 5.27 3S3.38 3.87 3.38 4.95 4.2 6.88 5.27 6.88s1.89-.86 1.89-1.93ZM20.62 13c0-3.47-1.85-5.08-4.31-5.08-1.99 0-2.88 1.09-3.38 1.85V8.5H9.56c.04.84 0 11.5 0 11.5h3.37v-6.42c0-.34.03-.67.13-.91.27-.67.9-1.36 1.95-1.36 1.38 0 1.93 1.03 1.93 2.54V20h3.38v-7Z"></path></svg></div>
                         </a>
-                        <a class="contact-direct-link" href="https://github.com/tatangrw" target="_blank" rel="noreferrer" aria-label="GitHub Tatang">
-                            <div><span>GitHub</span><strong>github.com/tatangrw</strong></div>
+                        <a class="contact-direct-link" href="https://github.com/devgandawijaya" target="_blank" rel="noreferrer" aria-label="GitHub Tatang">
+                            <div><span>GitHub</span><strong>github.com/devgandawijaya</strong></div>
                             <div class="contact-direct-icon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.58 2 12.23c0 4.51 2.87 8.34 6.84 9.69.5.09.68-.22.68-.49 0-.24-.01-1.04-.01-1.88-2.78.62-3.37-1.21-3.37-1.21-.46-1.18-1.11-1.49-1.11-1.49-.91-.64.07-.62.07-.62 1 .08 1.53 1.06 1.53 1.06.9 1.57 2.36 1.12 2.94.86.09-.67.35-1.13.63-1.39-2.22-.26-4.55-1.14-4.55-5.08 0-1.12.39-2.03 1.03-2.74-.1-.26-.45-1.3.1-2.71 0 0 .84-.27 2.75 1.05A9.3 9.3 0 0 1 12 6.89c.85 0 1.71.12 2.51.35 1.91-1.32 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.71 1.03 1.62 1.03 2.74 0 3.95-2.34 4.82-4.57 5.08.36.32.68.95.68 1.92 0 1.39-.01 2.5-.01 2.84 0 .27.18.59.69.49A10.27 10.27 0 0 0 22 12.23C22 6.58 17.52 2 12 2Z"></path></svg></div>
+                        </a>
+                        <a class="contact-direct-link" href="https://instagram.com/mr_gwg" target="_blank" rel="noreferrer" aria-label="Instagram Tatang">
+                            <div><span>Instagram</span><strong>@mr_gwg</strong></div>
+                            <div class="contact-direct-icon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.75A4 4 0 0 0 3.75 7.75v8.5a4 4 0 0 0 4 4h8.5a4 4 0 0 0 4-4v-8.5a4 4 0 0 0-4-4h-8.5Zm8.94 1.31a1.19 1.19 0 1 1 0 2.38 1.19 1.19 0 0 1 0-2.38ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 1.75A3.25 3.25 0 1 0 12 15.25 3.25 3.25 0 0 0 12 8.75Z"></path></svg></div>
                         </a>
                     </div>
                     <form class="contact-form">
                         <label>Name<input type="text" name="nama" placeholder="Enter your name"></label>
                         <label>Email<input type="email" name="email" placeholder="Enter your email"></label>
                         <label>Message<textarea name="pesan" rows="5" placeholder="Tell me about your project requirements"></textarea></label>
-                        <button class="submit-btn" type="submit">Send Message</button>
+                        <div class="contact-form-actions">
+                            <button class="submit-btn" type="submit">Send via WhatsApp</button>
+                            <button class="submit-btn is-secondary" type="button" data-contact-channel="email">Send via Email</button>
+                        </div>
+                        <p class="contact-form-note">The message will be prepared automatically from this form, then opened in your WhatsApp or email app.</p>
                     </form>
                 </div>
                 <aside class="contact-info reveal">
-                    <div class="contact-item glass-card"><span>Email</span><h3>hello@tatangrw.dev</h3><p>Main channel for project inquiries, proposal discussions, and initial meeting scheduling.</p></div>
-                    <div class="contact-item glass-card"><span>WhatsApp</span><h3>+62 812-3456-7890</h3><p>The fastest channel for quick discussions, feature follow-up, and early consultation.</p></div>
-                    <div class="contact-item glass-card"><span>Instagram</span><h3>@tatangrw.dev</h3><p>A place to share visual project updates, product insights, and creative activity.</p></div>
+                    <div class="contact-item glass-card"><span>Email</span><h3>devgandawijaya@gmail.com</h3><p>Main channel for project inquiries, proposal discussions, and initial meeting scheduling.</p></div>
+                    <div class="contact-item glass-card"><span>WhatsApp</span><h3>0822-1886-6002</h3><p>The fastest channel for quick discussions, feature follow-up, and early consultation.</p></div>
+                    <div class="contact-item glass-card"><span>Instagram</span><h3>@mr_gwg</h3><p>A place to share visual project updates, product insights, and creative activity.</p></div>
                     <div class="contact-item glass-card"><span>Location</span><h3>Bandung</h3><p>Available for remote, hybrid, and on-site collaboration depending on business needs.</p></div>
                 </aside>
             </div>
@@ -2065,9 +2107,9 @@
     <footer class="site-footer">
         <div class="container footer-shell">
             <div class="footer-social">
-                <a class="social-pill" href="https://linkedin.com/in/tatangrw" target="_blank" rel="noreferrer" aria-label="LinkedIn Footer"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.94 8.5H3.56V20h3.38V8.5Zm.22-3.55C7.16 3.87 6.34 3 5.27 3S3.38 3.87 3.38 4.95 4.2 6.88 5.27 6.88s1.89-.86 1.89-1.93ZM20.62 13c0-3.47-1.85-5.08-4.31-5.08-1.99 0-2.88 1.09-3.38 1.85V8.5H9.56c.04.84 0 11.5 0 11.5h3.37v-6.42c0-.34.03-.67.13-.91.27-.67.9-1.36 1.95-1.36 1.38 0 1.93 1.03 1.93 2.54V20h3.38v-7Z"></path></svg></a>
-                <a class="social-pill" href="https://github.com/tatangrw" target="_blank" rel="noreferrer" aria-label="GitHub Footer"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.58 2 12.23c0 4.51 2.87 8.34 6.84 9.69.5.09.68-.22.68-.49 0-.24-.01-1.04-.01-1.88-2.78.62-3.37-1.21-3.37-1.21-.46-1.18-1.11-1.49-1.11-1.49-.91-.64.07-.62.07-.62 1 .08 1.53 1.06 1.53 1.06.9 1.57 2.36 1.12 2.94.86.09-.67.35-1.13.63-1.39-2.22-.26-4.55-1.14-4.55-5.08 0-1.12.39-2.03 1.03-2.74-.1-.26-.45-1.3.1-2.71 0 0 .84-.27 2.75 1.05A9.3 9.3 0 0 1 12 6.89c.85 0 1.71.12 2.51.35 1.91-1.32 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.71 1.03 1.62 1.03 2.74 0 3.95-2.34 4.82-4.57 5.08.36.32.68.95.68 1.92 0 1.39-.01 2.5-.01 2.84 0 .27.18.59.69.49A10.27 10.27 0 0 0 22 12.23C22 6.58 17.52 2 12 2Z"></path></svg></a>
-                <a class="social-pill" href="https://instagram.com/tatangrw.dev" target="_blank" rel="noreferrer" aria-label="Instagram Footer"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.75A4 4 0 0 0 3.75 7.75v8.5a4 4 0 0 0 4 4h8.5a4 4 0 0 0 4-4v-8.5a4 4 0 0 0-4-4h-8.5Zm8.94 1.31a1.19 1.19 0 1 1 0 2.38 1.19 1.19 0 0 1 0-2.38ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 1.75A3.25 3.25 0 1 0 12 15.25 3.25 3.25 0 0 0 12 8.75Z"></path></svg></a>
+                <a class="social-pill" href="https://www.linkedin.com/in/tatang-roswandi-ganda-wijaya-b0851725b/" target="_blank" rel="noreferrer" aria-label="LinkedIn Footer"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.94 8.5H3.56V20h3.38V8.5Zm.22-3.55C7.16 3.87 6.34 3 5.27 3S3.38 3.87 3.38 4.95 4.2 6.88 5.27 6.88s1.89-.86 1.89-1.93ZM20.62 13c0-3.47-1.85-5.08-4.31-5.08-1.99 0-2.88 1.09-3.38 1.85V8.5H9.56c.04.84 0 11.5 0 11.5h3.37v-6.42c0-.34.03-.67.13-.91.27-.67.9-1.36 1.95-1.36 1.38 0 1.93 1.03 1.93 2.54V20h3.38v-7Z"></path></svg></a>
+                <a class="social-pill" href="https://github.com/devgandawijaya" target="_blank" rel="noreferrer" aria-label="GitHub Footer"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.58 2 12.23c0 4.51 2.87 8.34 6.84 9.69.5.09.68-.22.68-.49 0-.24-.01-1.04-.01-1.88-2.78.62-3.37-1.21-3.37-1.21-.46-1.18-1.11-1.49-1.11-1.49-.91-.64.07-.62.07-.62 1 .08 1.53 1.06 1.53 1.06.9 1.57 2.36 1.12 2.94.86.09-.67.35-1.13.63-1.39-2.22-.26-4.55-1.14-4.55-5.08 0-1.12.39-2.03 1.03-2.74-.1-.26-.45-1.3.1-2.71 0 0 .84-.27 2.75 1.05A9.3 9.3 0 0 1 12 6.89c.85 0 1.71.12 2.51.35 1.91-1.32 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.71 1.03 1.62 1.03 2.74 0 3.95-2.34 4.82-4.57 5.08.36.32.68.95.68 1.92 0 1.39-.01 2.5-.01 2.84 0 .27.18.59.69.49A10.27 10.27 0 0 0 22 12.23C22 6.58 17.52 2 12 2Z"></path></svg></a>
+                <a class="social-pill" href="https://instagram.com/mr_gwg" target="_blank" rel="noreferrer" aria-label="Instagram Footer"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.75A4 4 0 0 0 3.75 7.75v8.5a4 4 0 0 0 4 4h8.5a4 4 0 0 0 4-4v-8.5a4 4 0 0 0-4-4h-8.5Zm8.94 1.31a1.19 1.19 0 1 1 0 2.38 1.19 1.19 0 0 1 0-2.38ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 1.75A3.25 3.25 0 1 0 12 15.25 3.25 3.25 0 0 0 12 8.75Z"></path></svg></a>
             </div>
             <p>&copy; 2026 Tatang Roswandi Ganda Wijaya</p>
         </div>
