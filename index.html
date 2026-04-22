@@ -98,8 +98,12 @@
         }
 
         .section {
-            padding: 62px 0;
+            padding: 50px 0;
             position: relative;
+        }
+
+        .section-tight {
+            padding-top: 24px;
         }
 
         .section-heading {
@@ -291,24 +295,26 @@
         }
 
         .hero {
-            min-height: 100vh;
+            min-height: calc(100vh - var(--nav-height));
             display: flex;
-            align-items: center;
-            padding: 12px 0 24px;
+            align-items: flex-start;
+            padding: 0 0 12px;
             overflow: clip;
         }
 
         .hero-shell {
             display: grid;
             grid-template-columns: 1.02fr minmax(360px, 0.95fr) 0.72fr;
-            gap: 24px;
-            align-items: center;
-            min-height: calc(100vh - var(--nav-height) - 24px);
+            gap: 20px;
+            align-items: start;
+            min-height: calc(100vh - var(--nav-height) - 12px);
+            padding-top: 0;
         }
 
         .hero-copy {
             align-self: center;
             position: relative;
+            margin-top: -10px;
         }
 
         .hero-copy p {
@@ -472,6 +478,84 @@
             color: #8fb1ff;
         }
 
+        .section-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 16px;
+        }
+
+        .section-pills span {
+            display: inline-flex;
+            align-items: center;
+            padding: 9px 12px;
+            border-radius: 999px;
+            background: rgba(63, 124, 255, 0.1);
+            border: 1px solid rgba(143, 177, 255, 0.12);
+            color: #dbe7ff;
+            font-size: 0.88rem;
+        }
+
+        .proof-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 16px;
+        }
+
+        .proof-card {
+            padding: 22px;
+            display: grid;
+            gap: 12px;
+        }
+
+        .proof-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.78rem;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: #9ebcff;
+        }
+
+        .proof-label::before {
+            content: "";
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #7ea8ff, #3f7cff);
+            box-shadow: 0 0 0 6px rgba(63, 124, 255, 0.1);
+        }
+
+        .proof-card strong {
+            font-size: 2rem;
+            line-height: 1;
+            color: var(--text);
+        }
+
+        .proof-card p {
+            font-size: 0.94rem;
+            color: #d6e4ff;
+        }
+
+        .proof-list {
+            display: grid;
+            gap: 8px;
+            color: #c4d6fb;
+            font-size: 0.9rem;
+        }
+
+        .proof-list li {
+            display: flex;
+            gap: 10px;
+            align-items: flex-start;
+        }
+
+        .proof-list li::before {
+            content: "•";
+            color: #8fb1ff;
+        }
+
         .floating-arrow {
             width: 68px;
             height: 68px;
@@ -498,7 +582,7 @@
             align-items: stretch;
             min-height: min(80vh, 760px);
             padding-bottom: 64px;
-            transform: translateY(-8px);
+            transform: translateY(-18px);
         }
 
         .hero-media::before {
@@ -782,6 +866,26 @@
         .skills-shell {
             display: grid;
             gap: 18px;
+        }
+
+        .focus-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 16px;
+        }
+
+        .focus-card {
+            padding: 20px;
+            display: grid;
+            gap: 10px;
+        }
+
+        .focus-card h3 {
+            font-size: 1rem;
+        }
+
+        .focus-card p {
+            font-size: 0.93rem;
         }
 
         .skills-grid {
@@ -1453,6 +1557,11 @@
             transition: opacity 0.7s ease, transform 0.7s ease;
         }
 
+        .hero .reveal {
+            opacity: 1;
+            transform: none;
+        }
+
         .reveal.is-visible {
             opacity: 1;
             transform: translateY(0);
@@ -1467,6 +1576,8 @@
         @media (max-width: 1100px) {
             .hero-shell,
             .about-grid,
+            .proof-grid,
+            .focus-grid,
             .skills-grid,
             .contact-grid {
                 grid-template-columns: 1fr;
@@ -1513,7 +1624,7 @@
 
         @media (max-width: 820px) {
             .section {
-                padding: 54px 0;
+                padding: 42px 0;
             }
 
             .menu-toggle {
@@ -1557,7 +1668,11 @@
 
             .hero {
                 min-height: auto;
-                padding-top: 8px;
+                padding-top: 0;
+            }
+
+            .hero-copy {
+                margin-top: 0;
             }
 
             .hero-media {
@@ -1573,6 +1688,7 @@
 
             .hero-side,
             .stats-grid,
+            .focus-grid,
             .skills-grid,
             .video-grid,
             .portfolio-grid,
@@ -1629,6 +1745,8 @@
             }
 
             .about-copy,
+            .proof-card,
+            .focus-card,
             .stats-card,
             .skill-card,
             .video-card,
@@ -1762,12 +1880,58 @@
             </div>
         </section>
 
+        <section class="section section-tight" aria-label="Portfolio proof summary">
+            <div class="container proof-grid">
+                <article class="proof-card glass-card reveal">
+                    <span class="proof-label">Core Expertise</span>
+                    <strong>24</strong>
+                    <p>Strong capability mix across software architecture, backend engineering, ERP, documentation, mobile delivery, and infrastructure operations.</p>
+                    <ul class="proof-list">
+                        <li>Architecture, system analysis, and business analysis</li>
+                        <li>Backend, mobile, ERP, and DevOps execution</li>
+                    </ul>
+                </article>
+                <article class="proof-card glass-card reveal">
+                    <span class="proof-label">Project Coverage</span>
+                    <strong>21+</strong>
+                    <p>Portfolio coverage spans ecommerce, ERP, POS, payment systems, dashboards, attendance platforms, and internal business operations.</p>
+                    <ul class="proof-list">
+                        <li>Retail, manufacturing, fintech, HR, and enterprise domains</li>
+                        <li>Product strategy through implementation delivery</li>
+                    </ul>
+                </article>
+                <article class="proof-card glass-card reveal">
+                    <span class="proof-label">YouTube Tutorials</span>
+                    <strong>11+</strong>
+                    <p>Public technical tutorials strengthen credibility by showing hands-on implementation in Golang, Docker, Odoo, Android, and analytics tools.</p>
+                    <ul class="proof-list">
+                        <li>Setup guides, CRUD, deployment, and device integration</li>
+                        <li>Useful for both beginner and implementation teams</li>
+                    </ul>
+                </article>
+                <article class="proof-card glass-card reveal">
+                    <span class="proof-label">Experience Track</span>
+                    <strong>5+ Years</strong>
+                    <p>Career path combines leadership roles, technical supervision, project management, and advisory work in full-time and freelance tracks.</p>
+                    <ul class="proof-list">
+                        <li>5 full-time roles and 16 freelance engagements</li>
+                        <li>Strong mix of strategic and execution ownership</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
         <section class="section" id="about">
             <div class="container about-grid">
                 <div class="about-copy glass-card reveal">
                     <span class="eyebrow">About Me</span>
                     <h2>Digital solutions leader with a <span class="accent-line">business mindset</span></h2>
                     <p>I build digital products that connect architecture, analysis, and execution. My experience covers ERP, POS, business dashboards, company profile websites, modern landing pages, backend platforms, mobile apps, and automation systems designed to be efficient, reliable, and easy for users to adopt.</p>
+                    <div class="section-pills">
+                        <span>Architecture to delivery ownership</span>
+                        <span>Strong business-process orientation</span>
+                        <span>Designed for adoption and scale</span>
+                    </div>
                     <div class="stats-grid">
                         <div class="stat-box"><strong>5+</strong><p>Years of experience</p></div>
                         <div class="stat-box"><strong>100+</strong><p>Completed projects</p></div>
@@ -1795,8 +1959,31 @@
             <div class="container skills-shell">
                 <div class="section-heading reveal">
                     <span class="eyebrow">Core Skills</span>
-                    <h2>24 Core Skills</h2>
-                    <p>A senior-level capability stack covering architecture, delivery, software engineering, documentation, integration, and platform operations across enterprise and product environments.</p>
+                    <h2>Skills That Support Strategy, Delivery, and Execution</h2>
+                    <p>This stack is not limited to coding. It covers end-to-end capability from requirement analysis, architecture planning, technical documentation, system delivery, mobile and backend engineering, to operational deployment support.</p>
+                    <div class="section-pills">
+                        <span>24 validated capability areas</span>
+                        <span>Technical and business documentation</span>
+                        <span>Backend, mobile, ERP, and infrastructure</span>
+                    </div>
+                </div>
+                <div class="focus-grid">
+                    <article class="focus-card glass-card reveal">
+                        <h3>Architecture &amp; Analysis</h3>
+                        <p>System architecture, system analysis, business analysis, BRD, FSD, TSD, audit documentation, and SOP design.</p>
+                    </article>
+                    <article class="focus-card glass-card reveal">
+                        <h3>Engineering Delivery</h3>
+                        <p>Golang, Node.js, Spring Boot, Laravel, React.js, and cross-stack delivery for modular business platforms.</p>
+                    </article>
+                    <article class="focus-card glass-card reveal">
+                        <h3>Enterprise &amp; Data</h3>
+                        <p>Odoo customization, Oracle, MySQL, PostgreSQL, ERP implementation, reporting systems, and operational platforms.</p>
+                    </article>
+                    <article class="focus-card glass-card reveal">
+                        <h3>Deployment &amp; Operations</h3>
+                        <p>Docker, Jenkins CI/CD, Kong, Elasticsearch, and release flows that support stable production environments.</p>
+                    </article>
                 </div>
                 <div class="skills-grid">
                     <article class="skill-card glass-card reveal" style="--skill-score: 97%;"><div class="skill-head"><span class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 7h16"></path><path d="M6 12h12"></path><path d="M8 17h8"></path><rect x="3" y="4" width="18" height="16" rx="3"></rect></svg></span><div class="skill-main"><div class="skill-top"><h3>Golang</h3><span class="skill-level">Senior</span></div><span class="skill-meta">Backend Architecture</span></div></div><p>Building high-performance services, enterprise APIs, clean modular backends, and scalable distributed systems in Go.</p><div class="skill-progress"><div class="skill-progress-top"><span>Capability Score</span><strong>97%</strong></div><div class="skill-progress-track"><span class="skill-progress-bar"></span></div></div></article>
@@ -1831,16 +2018,21 @@
             <div class="container">
                 <div class="section-heading reveal">
                     <span class="eyebrow">Selected Work</span>
-                    <h2>My Portfolio</h2>
-                    <p>A curated set of categorized sample projects that shows the scope of services, systems, and product directions I commonly handle.</p>
+                    <h2>Projects Across Commerce, ERP, Operations, and Audit</h2>
+                    <p>This portfolio is grouped by business domain so visitors can quickly understand the type of systems handled, the industries involved, and the breadth of implementation experience behind each category.</p>
+                    <div class="section-pills">
+                        <span>Ecommerce and marketplace delivery</span>
+                        <span>ERP, POS, and payment platforms</span>
+                        <span>Audit, dashboard, and operational systems</span>
+                    </div>
                 </div>
                 <div class="tab-group reveal" data-tab-group>
                     <div class="tab-controls" role="tablist" aria-label="Portfolio category tabs">
                         <button class="tab-button is-active" type="button" role="tab" aria-selected="true" data-tab-target="ecommerce">Ecommerce</button>
                         <button class="tab-button" type="button" role="tab" aria-selected="false" data-tab-target="erp">ERP</button>
-                        <button class="tab-button" type="button" role="tab" aria-selected="false" data-tab-target="crypto">Chripto</button>
-                        <button class="tab-button" type="button" role="tab" aria-selected="false" data-tab-target="devops">Dev Ops</button>
-                        <button class="tab-button" type="button" role="tab" aria-selected="false" data-tab-target="business-analysis">Bisnis &amp; System Analisis</button>
+                        <button class="tab-button" type="button" role="tab" aria-selected="false" data-tab-target="crypto">Crypto</button>
+                        <button class="tab-button" type="button" role="tab" aria-selected="false" data-tab-target="devops">DevOps</button>
+                        <button class="tab-button" type="button" role="tab" aria-selected="false" data-tab-target="business-analysis">Business &amp; System Analysis</button>
                     </div>
 
                     <div class="tab-panel is-active" data-tab-panel="ecommerce">
@@ -1873,8 +2065,8 @@
                     <div class="tab-panel" data-tab-panel="crypto">
                         <div class="tab-summary"><p>Digital payment and crypto-related initiatives focused on transaction experience, wallet flow, and fintech service direction.</p><span>2 Projects</span></div>
                         <div class="portfolio-grid">
-                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1621761191319-c6fb62004040?auto=format&fit=crop&w=900&q=80" alt="Pokepay crypto project"></div><div class="portfolio-meta"><span>Chripto</span><span>Payment</span></div><h3>Pokepay</h3><p>Crypto and digital payment product concept built around transaction flow, wallet interaction, and service usability.</p></article>
-                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1640161704729-cbe966a08476?auto=format&fit=crop&w=900&q=80" alt="ComeComePay crypto project"></div><div class="portfolio-meta"><span>Chripto</span><span>Fintech</span></div><h3>ComeComePay</h3><p>Payment-oriented digital platform with a crypto-adjacent service direction and transaction experience focus.</p></article>
+                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1621761191319-c6fb62004040?auto=format&fit=crop&w=900&q=80" alt="Pokepay crypto project"></div><div class="portfolio-meta"><span>Crypto</span><span>Payment</span></div><h3>Pokepay</h3><p>Crypto and digital payment product concept built around transaction flow, wallet interaction, and service usability.</p></article>
+                            <article class="portfolio-card glass-card reveal"><div class="portfolio-image"><img src="https://images.unsplash.com/photo-1640161704729-cbe966a08476?auto=format&fit=crop&w=900&q=80" alt="ComeComePay crypto project"></div><div class="portfolio-meta"><span>Crypto</span><span>Fintech</span></div><h3>ComeComePay</h3><p>Payment-oriented digital platform with a crypto-adjacent service direction and transaction experience focus.</p></article>
                         </div>
                     </div>
 
@@ -1901,8 +2093,13 @@
             <div class="container">
                 <div class="section-heading reveal">
                     <span class="eyebrow">Video Showcase</span>
-                    <h2>YouTube Videos</h2>
-                    <p>A curated collection of 11 and more YouTube videos covering Metabase, Golang, Docker, Odoo, Android, and attendance solution setup tutorials.</p>
+                    <h2>YouTube Tutorials That Show Real Implementation Skills</h2>
+                    <p>This section is important because it does not only claim expertise. It shows public technical tutorials across analytics, backend setup, containerized deployment, ERP, Android, and attendance device configuration.</p>
+                    <div class="section-pills">
+                        <span>11+ public tutorial videos</span>
+                        <span>Golang, Docker, Odoo, Android, Metabase</span>
+                        <span>Hands-on setup and implementation focus</span>
+                    </div>
                 </div>
                 <div class="video-grid">
                     <article class="video-card glass-card reveal">
@@ -1991,7 +2188,12 @@
                 <div class="section-heading reveal">
                     <span class="eyebrow">Career Path</span>
                     <h2>Experience</h2>
-                    <p>My experience is separated into full-time and freelance tracks to make the career timeline easier to review.</p>
+                    <p>The experience track is split into full-time and freelance work so visitors can clearly see both long-term employment history and project-based leadership across different industries.</p>
+                    <div class="section-pills">
+                        <span>Leadership and execution roles</span>
+                        <span>Full-time and freelance separation</span>
+                        <span>Retail, fintech, telecom, HR, and manufacturing</span>
+                    </div>
                 </div>
                 <div class="tab-group reveal" data-tab-group>
                     <div class="tab-controls" role="tablist" aria-label="Experience category tabs">
